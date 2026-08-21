@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Sparkles,
 } from "lucide-react";
 import { POPULAR_CATEGORIES, CategoryItem } from "@/data/categories";
 
@@ -215,6 +217,18 @@ export default function PopularCategories() {
                 }`}
               />
             ))}
+          </div>
+
+          {/* View All 18 Categories Action Button */}
+          <div className="mt-8 text-center">
+            <Link
+              href="/categories"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#6B0F1A] hover:bg-[#3D0710] text-[#FFF6A3] hover:text-[#F4E409] border-2 border-[#F4E409] px-6 py-3.5 text-sm sm:text-base font-black shadow-md transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <Sparkles className="w-5 h-5 text-[#F4E409]" />
+              <span>View All 18 Gift Shop Categories</span>
+              <ArrowRight className="w-4 h-4 text-[#F4E409]" />
+            </Link>
           </div>
 
         </div>

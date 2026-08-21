@@ -56,10 +56,10 @@ export default function Header({ onSelectRole }: HeaderProps) {
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    if (href.startsWith("#")) {
+    closeMenu();
+    if (href.includes("#") && typeof window !== "undefined" && window.location.pathname === "/") {
       e.preventDefault();
-      closeMenu();
-      const targetId = href.substring(1);
+      const targetId = href.split("#")[1];
 
       setTimeout(() => {
         const element = document.getElementById(targetId);
@@ -75,10 +75,14 @@ export default function Header({ onSelectRole }: HeaderProps) {
     if (onSelectRole) {
       onSelectRole("gym-owner");
     }
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (typeof window !== "undefined" && window.location.pathname === "/") {
+      const element = document.getElementById("contact");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
     }
+    window.location.href = "/#contact";
   };
 
   return (

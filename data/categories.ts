@@ -6,6 +6,7 @@ export interface CategoryItem {
   image: string;
   alt: string;
   badge?: string;
+  suitableFor?: string[];
 }
 
 export const POPULAR_CATEGORIES: CategoryItem[] = [
@@ -17,6 +18,7 @@ export const POPULAR_CATEGORIES: CategoryItem[] = [
     image: "/categories/packaged-snacks.png",
     alt: "Handmade gifts and artisan crafts displayed on gift shop shelves",
     badge: "High Demand",
+    suitableFor: ["Handmade crafts", "Artisan candles", "Pottery", "Handcrafted decor", "Artistic gifts"],
   },
   {
     id: "personalized-gifts",
@@ -26,6 +28,7 @@ export const POPULAR_CATEGORIES: CategoryItem[] = [
     image: "/categories/desserts-chocolates.png",
     alt: "Personalized gifts and custom products inside gift store",
     badge: "Popular",
+    suitableFor: ["Custom engraved items", "Personalized photo frames", "Bespoke mugs", "Custom gift boxes"],
   },
   {
     id: "stationery-journaling",
@@ -35,6 +38,7 @@ export const POPULAR_CATEGORIES: CategoryItem[] = [
     image: "/categories/healthy-foods.png",
     alt: "Stationery, planners, and journaling accessories display",
     badge: "Top Seller",
+    suitableFor: ["Artisan notebooks", "Planners & journals", "Greeting cards", "Calligraphy sets"],
   },
   {
     id: "home-decor-gifts",
@@ -44,6 +48,7 @@ export const POPULAR_CATEGORIES: CategoryItem[] = [
     image: "/categories/beverages.png",
     alt: "Home decor items and lifestyle gifts in store display",
     badge: "Trending",
+    suitableFor: ["Scented candles", "Mini wall art", "Ceramic vases", "Desk decor", "Diffusers"],
   },
   {
     id: "jewellery-fashion-accessories",
@@ -53,6 +58,7 @@ export const POPULAR_CATEGORIES: CategoryItem[] = [
     image: "/categories/artisanal-products.png",
     alt: "Handmade jewelry and fashion accessories on display",
     badge: "Popular",
+    suitableFor: ["Handmade jewelry", "Tote bags", "Printed scarves", "Fashion trinkets"],
   },
   {
     id: "kids-creative-gifts",
@@ -62,7 +68,130 @@ export const POPULAR_CATEGORIES: CategoryItem[] = [
     image: "/categories/lifestyle-accessories.png",
     alt: "Kids gifts and creative toys displayed on gift shop racks",
     badge: "Creative",
+    suitableFor: ["Wooden toys", "DIY craft kits", "Storybooks", "Puzzles", "Kids gift sets"],
   },
 ];
 
-
+export const ALL_18_CATEGORIES: CategoryItem[] = [
+  ...POPULAR_CATEGORIES,
+  {
+    id: "gourmet-chocolates-sweets",
+    name: "Gourmet Chocolates & Specialty Sweets",
+    description: "Artisanal chocolates, handmade truffles, luxury candy jars, organic sweets, and gift hampers.",
+    iconName: "Utensils",
+    image: "/categories/desserts-chocolates.png",
+    alt: "Gourmet chocolates and specialty sweets gift boxes",
+    badge: "High Margin",
+    suitableFor: ["Handmade truffles", "Artisanal chocolates", "Gift candy jars", "Sweet hampers"],
+  },
+  {
+    id: "skincare-bath-sets",
+    name: "Organic Skincare & Bath Gift Sets",
+    description: "Handmade organic soaps, bath bombs, essential oils, body scrubs, and self-care gift boxes.",
+    iconName: "Sparkles",
+    image: "/categories/healthy-foods.png",
+    alt: "Organic skincare and bath gift sets on store shelves",
+    badge: "Wellness",
+    suitableFor: ["Handmade soaps", "Bath bombs", "Essential oils", "Self-care hampers"],
+  },
+  {
+    id: "festive-seasonal-gifts",
+    name: "Seasonal & Festive Gift Displays",
+    description: "Diwali gift hampers, Christmas decorations, Rakhi gift boxes, Valentine products, and New Year gifts.",
+    iconName: "Gift",
+    image: "/categories/packaged-snacks.png",
+    alt: "Seasonal and festive gifts displayed inside gift shop",
+    badge: "Seasonal Peak",
+    suitableFor: ["Diwali hampers", "Christmas decor", "Rakhi gift sets", "Festive favors"],
+  },
+  {
+    id: "corporate-executive-gifts",
+    name: "Corporate Gifts & Executive Keepsakes",
+    description: "Leather journals, desk organization sets, customized pens, metal cardholders, and corporate hampers.",
+    iconName: "ShoppingBag",
+    image: "/categories/lifestyle-accessories.png",
+    alt: "Corporate gifts and executive stationery keepsakes",
+    badge: "B2B & Retail",
+    suitableFor: ["Leather journals", "Customized pens", "Desk organizers", "Executive sets"],
+  },
+  {
+    id: "fragrance-aroma-wellness",
+    name: "Aroma, Fragrance & Wellness Gifts",
+    description: "Reed diffusers, incense cone sets, scented sachets, wax melts, and calming wellness hampers.",
+    iconName: "HeartHandshake",
+    image: "/categories/beverages.png",
+    alt: "Aroma diffusers and wellness fragrance gifts on display",
+    badge: "Aesthetic",
+    suitableFor: ["Reed diffusers", "Scented wax melts", "Aroma oils", "Incense gift sets"],
+  },
+  {
+    id: "souvenirs-travel-keepsakes",
+    name: "Souvenirs & Travel Keepsakes",
+    description: "Local city souvenirs, fridge magnets, travel journals, luggage tags, and heritage craft gifts.",
+    iconName: "Gift",
+    image: "/categories/artisanal-products.png",
+    alt: "Souvenirs and travel keepsakes in gift store rack",
+    badge: "Tourist Hit",
+    suitableFor: ["City fridge magnets", "Travel journals", "Heritage crafts", "Souvenir keychains"],
+  },
+  {
+    id: "plush-toys-soft-gifts",
+    name: "Plush Toys & Soft Gifts",
+    description: "Cuddly teddy bears, plush keychains, soft cushions, character plushies, and baby shower gifts.",
+    iconName: "Sparkles",
+    image: "/categories/lifestyle-accessories.png",
+    alt: "Plush toys and soft gift cushions displayed in store",
+    badge: "Evergreen",
+    suitableFor: ["Teddy bears", "Plush keychains", "Soft cushions", "Baby shower gifts"],
+  },
+  {
+    id: "glassware-ceramic-sets",
+    name: "Glassware & Ceramic Gift Sets",
+    description: "Hand-painted coffee mugs, ceramic tea sets, aesthetic glassware, and pottery serving dishes.",
+    iconName: "Utensils",
+    image: "/categories/desserts-chocolates.png",
+    alt: "Glassware and ceramic coffee mug gift sets",
+    badge: "Premium",
+    suitableFor: ["Hand-painted mugs", "Ceramic tea sets", "Glass carafes", "Pottery bowls"],
+  },
+  {
+    id: "party-supplies-celebrations",
+    name: "Party Supplies & Celebration Kits",
+    description: "Designer gift wrapping paper, fancy ribbons, cake toppers, party props, and greeting banner sets.",
+    iconName: "Sparkles",
+    image: "/categories/packaged-snacks.png",
+    alt: "Party supplies and designer gift wrapping accessories",
+    badge: "High Repeat",
+    suitableFor: ["Designer gift wraps", "Fancy ribbons", "Party props", "Cake toppers"],
+  },
+  {
+    id: "eco-friendly-sustainable-gifts",
+    name: "Eco-Friendly & Sustainable Gifts",
+    description: "Jute bags, bamboo planters, seed pens, recycled paper notebooks, and plastic-free gift items.",
+    iconName: "HeartHandshake",
+    image: "/categories/healthy-foods.png",
+    alt: "Eco-friendly sustainable gifts and bamboo accessories",
+    badge: "Eco Choice",
+    suitableFor: ["Bamboo planters", "Jute tote bags", "Plantable seed pens", "Recycled notebooks"],
+  },
+  {
+    id: "art-prints-miniatures",
+    name: "Art Prints & Miniature Paintings",
+    description: "Framed mini canvas prints, digital artwork, handmade bookmarks, postcard art, and sketch cards.",
+    iconName: "Gift",
+    image: "/categories/artisanal-products.png",
+    alt: "Art prints and miniature framed paintings on shelf display",
+    badge: "Artisan",
+    suitableFor: ["Framed mini prints", "Handmade bookmarks", "Sketch cards", "Postcard sets"],
+  },
+  {
+    id: "curated-gift-hampers",
+    name: "Curated Gift Boxes & Hampers",
+    description: "Ready-to-gift theme boxes, birthday hamper trays, anniversary bundles, and luxury gift baskets.",
+    iconName: "ShoppingBag",
+    image: "/categories/beverages.png",
+    alt: "Curated gift boxes and luxury gift hamper baskets",
+    badge: "Bestseller",
+    suitableFor: ["Theme gift boxes", "Birthday hampers", "Anniversary baskets", "Surprise boxes"],
+  },
+];
