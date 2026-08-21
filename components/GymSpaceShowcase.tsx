@@ -178,8 +178,8 @@ export default function GymSpaceShowcase({
 
 
         {/* Category Tab Bar (Flex Wrap - Fully Visible Without Horizontal Scroll) */}
-        <div className="mb-10 flex items-center justify-center">
-          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center max-w-5xl mx-auto px-2">
+        <div className="mb-8 sm:mb-10 flex items-center justify-center">
+          <div className="flex flex-wrap gap-1.5 sm:gap-3 justify-center max-w-5xl mx-auto px-1">
             {SHOWCASE_CATEGORIES.map((cat, idx) => {
               const IconComp = iconMap[cat.iconName] || Layers;
               const isActive = idx === activeIndex;
@@ -193,13 +193,13 @@ export default function GymSpaceShowcase({
                     setActiveIndex(idx);
                     setTimeout(() => setIsAnimating(false), 450);
                   }}
-                  className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold border transition-all cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold border transition-all cursor-pointer ${
                     isActive
-                      ? "bg-[#6B0F1A] text-[#FFF6A3] border-[#F4E409] shadow-md scale-105"
+                      ? "bg-[#6B0F1A] text-[#FFF6A3] border-[#F4E409] shadow-md scale-[1.02] sm:scale-105"
                       : "bg-[#FFFDF5] text-[#6B0F1A] border-[#F0E2E4] hover:bg-[#FFF6A3]/40"
                   }`}
                 >
-                  <IconComp className={`w-4 h-4 flex-shrink-0 ${isActive ? "text-[#F4E409]" : "text-[#6B0F1A]"}`} />
+                  <IconComp className={`w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 ${isActive ? "text-[#F4E409]" : "text-[#6B0F1A]"}`} />
                   <span className="whitespace-normal text-left">{cat.shortName}</span>
                 </button>
               );
@@ -212,26 +212,26 @@ export default function GymSpaceShowcase({
           ref={showcaseRef}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative bg-[#FFFDF5] rounded-3xl border-2 border-[#6B0F1A] p-6 sm:p-10 px-8 sm:px-14 lg:px-16 shadow-[0_24px_70px_rgba(107,15,26,0.12)] overflow-hidden"
+          className="relative bg-[#FFFDF5] rounded-2xl sm:rounded-3xl border-2 border-[#6B0F1A] p-4 sm:p-10 px-4 min-[400px]:px-8 sm:px-14 lg:px-16 shadow-[0_24px_70px_rgba(107,15,26,0.12)] overflow-hidden"
         >
-          {/* Left Arrow Button on Left Side of Box */}
+          {/* Left Arrow Button */}
           <button
             type="button"
             onClick={handlePrev}
             aria-label="Previous space category"
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#6B0F1A] text-[#FFF6A3] border-2 border-[#F4E409] flex items-center justify-center shadow-lg hover:bg-[#3D0710] hover:text-[#F4E409] hover:scale-105 transition-all cursor-pointer active:scale-95"
+            className="absolute left-1.5 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#6B0F1A] text-[#FFF6A3] border-2 border-[#F4E409] flex items-center justify-center shadow-lg hover:bg-[#3D0710] hover:text-[#F4E409] hover:scale-105 transition-all cursor-pointer active:scale-95"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
 
-          {/* Right Arrow Button on Right Side of Box */}
+          {/* Right Arrow Button */}
           <button
             type="button"
             onClick={handleNext}
             aria-label="Next space category"
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#6B0F1A] text-[#FFF6A3] border-2 border-[#F4E409] flex items-center justify-center shadow-lg hover:bg-[#3D0710] hover:text-[#F4E409] hover:scale-105 transition-all cursor-pointer active:scale-95"
+            className="absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#6B0F1A] text-[#FFF6A3] border-2 border-[#F4E409] flex items-center justify-center shadow-lg hover:bg-[#3D0710] hover:text-[#F4E409] hover:scale-105 transition-all cursor-pointer active:scale-95"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

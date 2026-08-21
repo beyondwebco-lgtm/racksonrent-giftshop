@@ -87,41 +87,41 @@ export default function Header({ onSelectRole }: HeaderProps) {
         scrolled ? "py-2 shadow-md bg-[#FFFDF5]/98" : "py-3 sm:py-4 shadow-xs"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Far Left: Brand Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group focus:outline-none"
+          className="flex items-center gap-2 sm:gap-3 flex-shrink-0 group focus:outline-none min-w-0"
           aria-label="Racks on Rent Home"
         >
           {/* Square Rack-Icon Logo */}
-          <div className="relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-xl overflow-hidden flex-shrink-0 bg-white p-0.5 border border-[#6B0F1A]/20 shadow-2xs group-hover:scale-[1.03] transition-transform">
+          <div className="relative w-9 h-9 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-xl overflow-hidden flex-shrink-0 bg-white p-0.5 border border-[#6B0F1A]/20 shadow-2xs group-hover:scale-[1.03] transition-transform">
             <Image
               src="/images/logo.webp"
               alt="Racks on Rent Logo Icon"
               fill
-              sizes="(max-width: 640px) 44px, (max-width: 1024px) 48px, 52px"
+              sizes="(max-width: 640px) 36px, (max-width: 1024px) 48px, 52px"
               priority
               className="object-contain"
             />
           </div>
 
           {/* Separate Horizontal Logo Lockup */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center min-w-0">
             {/* Main Brand Title */}
-            <div className="flex items-baseline font-black tracking-tighter leading-none text-xl sm:text-2xl lg:text-3xl">
+            <div className="flex items-baseline font-black tracking-tighter leading-none text-lg sm:text-2xl lg:text-3xl">
               <span className="text-[#6B0F1A] font-black italic">Racks</span>
-              <span className="text-[#F4E409] font-bold italic lowercase mx-1 text-[0.8em]" style={{ fontFamily: "Georgia, serif" }}>on</span>
+              <span className="text-[#F4E409] font-bold italic lowercase mx-0.5 sm:mx-1 text-[0.8em]" style={{ fontFamily: "Georgia, serif" }}>on</span>
               <span className="text-[#F4E409] font-black italic">Rent</span>
             </div>
 
             {/* Tagline */}
-            <div className="flex items-center gap-1 mt-0.5 text-[8px] sm:text-[9px] lg:text-[10px] font-black uppercase tracking-[0.18em] leading-none whitespace-nowrap">
-              <span className="h-[1.5px] w-3 bg-[#6B0F1A] inline-block" />
+            <div className="flex items-center gap-0.5 sm:gap-1 mt-0.5 text-[7.5px] min-[360px]:text-[8.5px] sm:text-[9px] lg:text-[10px] font-black uppercase tracking-[0.14em] sm:tracking-[0.18em] leading-none whitespace-nowrap">
+              <span className="h-[1.5px] w-2 sm:w-3 bg-[#6B0F1A] inline-block flex-shrink-0" />
               <span className="text-[#6B0F1A]">SHARE SPACE.</span>
               <span className="text-[#F4E409]">GROW TOGETHER.</span>
-              <span className="h-[1.5px] w-3 bg-[#6B0F1A] inline-block" />
+              <span className="h-[1.5px] w-2 sm:w-3 bg-[#6B0F1A] inline-block flex-shrink-0" />
             </div>
           </div>
         </Link>
@@ -133,7 +133,7 @@ export default function Header({ onSelectRole }: HeaderProps) {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="px-2.5 xl:px-3 py-2 rounded-xl text-xs xl:text-sm font-extrabold text-[#6B0F1A] hover:text-[#3D0710] hover:bg-[#FFF6A3]/50 transition-all whitespace-nowrap"
+              className="px-2.5 xl:px-3 py-2 rounded-xl text-xs xl:text-sm font-extrabold text-[#6B0F1A] hover:text-[#3D0710] hover:bg-[#FFF6A3]/50 transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#F4E409]"
             >
               {link.label}
             </a>
@@ -145,7 +145,7 @@ export default function Header({ onSelectRole }: HeaderProps) {
           <button
             type="button"
             onClick={handleListYourRack}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4E409] px-5 py-2.5 text-xs xl:text-sm font-extrabold text-[#3D0710] transition-all hover:bg-[#3D0710] hover:text-[#F4E409] shadow-sm hover:shadow-md border border-[#6B0F1A]/20 cursor-pointer active:scale-95 whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4E409] px-5 py-2.5 text-xs xl:text-sm font-extrabold text-[#3D0710] transition-all hover:bg-[#3D0710] hover:text-[#F4E409] shadow-sm hover:shadow-md border border-[#6B0F1A]/20 cursor-pointer active:scale-95 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#6B0F1A]"
           >
             <Store className="w-4 h-4" />
             <span>List Your Gift Shop Space</span>
@@ -153,14 +153,15 @@ export default function Header({ onSelectRole }: HeaderProps) {
         </div>
 
         {/* Mobile Right Controls (< 1024px) */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden flex-shrink-0">
           <button
             type="button"
             onClick={handleListYourRack}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#F4E409] text-[#3D0710] text-xs font-extrabold shadow-xs hover:bg-[#3D0710] hover:text-[#F4E409] transition-colors cursor-pointer whitespace-nowrap"
+            className="inline-flex items-center gap-1.5 px-2.5 min-[360px]:px-3.5 py-2 rounded-full bg-[#F4E409] text-[#3D0710] text-[11px] min-[360px]:text-xs font-extrabold shadow-xs hover:bg-[#3D0710] hover:text-[#F4E409] transition-colors cursor-pointer whitespace-nowrap"
           >
-            <Store className="w-3.5 h-3.5" />
-            <span>List Gift Shop Space</span>
+            <Store className="w-3.5 h-3.5 flex-shrink-0" />
+            <span className="hidden min-[380px]:inline">List Gift Shop Space</span>
+            <span className="inline min-[380px]:hidden">List Space</span>
           </button>
 
           <button
@@ -168,7 +169,7 @@ export default function Header({ onSelectRole }: HeaderProps) {
             onClick={() => setMobileMenuOpen(true)}
             aria-expanded={mobileMenuOpen}
             aria-label="Open navigation menu"
-            className="p-2.5 rounded-xl text-[#6B0F1A] hover:text-[#3D0710] hover:bg-[#FFF6A3]/40 border border-[#F0E2E4] transition-colors cursor-pointer"
+            className="p-2 sm:p-2.5 rounded-xl text-[#6B0F1A] hover:text-[#3D0710] hover:bg-[#FFF6A3]/40 border border-[#F0E2E4] transition-colors cursor-pointer flex items-center justify-center min-w-[44px] min-h-[44px]"
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -179,7 +180,7 @@ export default function Header({ onSelectRole }: HeaderProps) {
       {/* Full-Screen Mobile Drawer (< 1024px) */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-50 bg-[#FFFDF5] lg:hidden flex flex-col justify-between overflow-y-auto"
+          className="fixed inset-0 z-50 bg-[#FFFDF5] lg:hidden flex flex-col justify-between overflow-y-auto h-[100dvh] w-full"
           role="dialog"
           aria-modal="true"
           aria-label="Navigation Menu"
@@ -221,20 +222,20 @@ export default function Header({ onSelectRole }: HeaderProps) {
               type="button"
               onClick={closeMenu}
               aria-label="Close navigation menu"
-              className="p-2.5 rounded-xl text-[#6B0F1A] hover:bg-[#FFF6A3]/40 border border-[#F0E2E4] transition-colors cursor-pointer"
+              className="p-2 sm:p-2.5 rounded-xl text-[#6B0F1A] hover:bg-[#FFF6A3]/40 border border-[#F0E2E4] transition-colors cursor-pointer flex items-center justify-center min-w-[44px] min-h-[44px]"
             >
               <X className="w-6 h-6" />
             </button>
           </div>
 
           {/* Navigation Links inside Mobile Drawer */}
-          <nav className="p-6 space-y-2 flex-1">
+          <nav className="p-4 sm:p-6 space-y-1.5 flex-1 overflow-y-auto">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="block px-4 py-3 rounded-xl font-bold text-lg text-[#6B0F1A] hover:bg-[#FFF6A3]/40 transition-colors"
+                className="block px-4 py-3.5 rounded-xl font-bold text-base sm:text-lg text-[#6B0F1A] hover:bg-[#FFF6A3]/40 active:bg-[#FFF6A3]/60 transition-colors"
               >
                 {link.label}
               </a>
@@ -242,11 +243,11 @@ export default function Header({ onSelectRole }: HeaderProps) {
           </nav>
 
           {/* Bottom Action CTA button inside Drawer */}
-          <div className="p-6 border-t border-[#F0E2E4] bg-[#FFF6A3]/30">
+          <div className="p-4 sm:p-6 border-t border-[#F0E2E4] bg-[#FFF6A3]/30 pb-[max(1.5rem,env(safe-area-inset-bottom))]">
             <button
               type="button"
               onClick={handleListYourRack}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#F4E409] py-3.5 text-base font-extrabold text-[#3D0710] shadow-xs hover:bg-[#3D0710] hover:text-[#F4E409] transition-colors cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#F4E409] py-3.5 text-base font-extrabold text-[#3D0710] shadow-xs hover:bg-[#3D0710] hover:text-[#F4E409] transition-colors cursor-pointer min-h-[48px]"
             >
               <Store className="w-5 h-5" />
               <span>List Your Gift Shop Space</span>

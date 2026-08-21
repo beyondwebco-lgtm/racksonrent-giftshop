@@ -125,43 +125,43 @@ ${detailsText}`;
 
         <div className="max-w-3xl mx-auto">
           {/* Role Selector Tabs */}
-          <div className="flex flex-wrap items-center justify-center p-1.5 bg-[#FFF6A3]/30 rounded-2xl mb-8 gap-1.5 border border-[#F0E2E4] shadow-xs">
+          <div className="flex flex-col min-[420px]:flex-row items-stretch min-[420px]:items-center justify-center p-1.5 bg-[#FFF6A3]/30 rounded-2xl mb-6 sm:mb-8 gap-1.5 border border-[#F0E2E4] shadow-xs">
             <button
               type="button"
               onClick={() => handleRoleSelect("gym-owner")}
-              className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 px-3.5 sm:px-4 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer min-h-[44px] ${
                 role === "gym-owner"
                   ? "bg-[#6B0F1A] text-[#FFF6A3] shadow-xs"
                   : "text-[#6B0F1A] hover:bg-[#FFF6A3]"
               }`}
             >
-              <Store className="w-4 h-4" />
+              <Store className="w-4 h-4 flex-shrink-0" />
               <span>Gift Shop Owner</span>
             </button>
 
             <button
               type="button"
               onClick={() => handleRoleSelect("wellness")}
-              className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 px-3.5 sm:px-4 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer min-h-[44px] ${
                 role === "wellness"
                   ? "bg-[#6B0F1A] text-[#FFF6A3] shadow-xs"
                   : "text-[#6B0F1A] hover:bg-[#FFF6A3]"
               }`}
             >
-              <Utensils className="w-4 h-4" />
+              <Utensils className="w-4 h-4 flex-shrink-0" />
               <span>Gift Entrepreneur</span>
             </button>
 
             <button
               type="button"
               onClick={() => handleRoleSelect("general")}
-              className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 px-3.5 sm:px-4 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer min-h-[44px] ${
                 role === "general"
                   ? "bg-[#6B0F1A] text-[#FFF6A3] shadow-xs"
                   : "text-[#6B0F1A] hover:bg-[#FFF6A3]"
               }`}
             >
-              <HelpCircle className="w-4 h-4" />
+              <HelpCircle className="w-4 h-4 flex-shrink-0" />
               <span>General Enquiry</span>
             </button>
           </div>
@@ -169,10 +169,10 @@ ${detailsText}`;
           {/* Form Box */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-5 rounded-3xl border-2 border-[#F0E2E4] bg-[#FFFDF5] p-6 sm:p-10 shadow-[0_12px_35px_rgba(107,15,26,0.06)]"
+            className="space-y-4 sm:space-y-5 rounded-2xl sm:rounded-3xl border-2 border-[#F0E2E4] bg-[#FFFDF5] p-4 sm:p-10 shadow-[0_12px_35px_rgba(107,15,26,0.06)]"
           >
             {submitted && (
-              <div className="bg-[#FFF6A3] border border-[#6B0F1A]/30 text-[#6B0F1A] p-4 rounded-2xl flex items-center gap-3 text-sm font-bold">
+              <div className="bg-[#FFF6A3] border border-[#6B0F1A]/30 text-[#6B0F1A] p-3.5 sm:p-4 rounded-2xl flex items-center gap-3 text-xs sm:text-sm font-bold">
                 <CheckCircle2 className="w-5 h-5 text-[#6B0F1A] flex-shrink-0" />
                 <span>Opening WhatsApp with your enquiry details...</span>
               </div>
@@ -180,7 +180,7 @@ ${detailsText}`;
 
             {/* Common Field: Full Name */}
             <div>
-              <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="fullName">
+              <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="fullName">
                 Full Name *
               </label>
               <input
@@ -190,7 +190,7 @@ ${detailsText}`;
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="e.g. Rahul Sharma"
-                className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm ${
+                className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px] ${
                   errors.fullName ? "border-red-500 bg-red-50/30" : ""
                 }`}
               />
@@ -200,7 +200,7 @@ ${detailsText}`;
             {/* Gift Shop Owner specific field */}
             {role === "gym-owner" && (
               <div>
-                <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="bakeryName">
+                <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="bakeryName">
                   Gift Shop Name *
                 </label>
                 <input
@@ -210,7 +210,7 @@ ${detailsText}`;
                   value={formData.bakeryName}
                   onChange={handleChange}
                   placeholder="e.g. The Gift House"
-                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm ${
+                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px] ${
                     errors.bakeryName ? "border-red-500 bg-red-50/30" : ""
                   }`}
                 />
@@ -221,7 +221,7 @@ ${detailsText}`;
             {/* Gift Entrepreneur specific field */}
             {role === "wellness" && (
               <div>
-                <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="brandName">
+                <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="brandName">
                   Brand or Gift Business Name *
                 </label>
                 <input
@@ -231,7 +231,7 @@ ${detailsText}`;
                   value={formData.brandName}
                   onChange={handleChange}
                   placeholder="e.g. Handmade Keepsakes Co."
-                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm ${
+                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px] ${
                     errors.brandName ? "border-red-500 bg-red-50/30" : ""
                   }`}
                 />
@@ -242,7 +242,7 @@ ${detailsText}`;
             {/* Phone & City Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="phone">
+                <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="phone">
                   Phone Number *
                 </label>
                 <input
@@ -252,7 +252,7 @@ ${detailsText}`;
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="7995424477"
-                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm ${
+                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px] ${
                     errors.phone ? "border-red-500 bg-red-50/30" : ""
                   }`}
                 />
@@ -260,7 +260,7 @@ ${detailsText}`;
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="city">
+                <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="city">
                   City *
                 </label>
                 <input
@@ -270,7 +270,7 @@ ${detailsText}`;
                   value={formData.city || initialSearchValues?.location || ""}
                   onChange={handleChange}
                   placeholder="e.g. Hyderabad"
-                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm ${
+                  className={`w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px] ${
                     errors.city ? "border-red-500 bg-red-50/30" : ""
                   }`}
                 />
@@ -282,7 +282,7 @@ ${detailsText}`;
             {role === "gym-owner" && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="availableSpace">
+                  <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="availableSpace">
                     Available Display Space Type
                   </label>
                   <select
@@ -290,7 +290,7 @@ ${detailsText}`;
                     name="availableSpace"
                     value={formData.availableSpace || initialSearchValues?.spaceType || "Gift Shop Counter Display"}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm"
+                    className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px]"
                   >
                     <option value="Gift Shop Counter Display">Gift Shop Counter Display</option>
                     <option value="Eye-Level Gift Shelf">Eye-Level Gift Shelf</option>
@@ -303,7 +303,7 @@ ${detailsText}`;
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="rackSize">
+                  <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="rackSize">
                     Display Space Size
                   </label>
                   <select
@@ -311,7 +311,7 @@ ${detailsText}`;
                     name="rackSize"
                     value={formData.rackSize || initialSearchValues?.rackSize || "Small — Up to 2×1 ft"}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm"
+                    className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px]"
                   >
                     <option value="Small — Up to 2×1 ft">Small — Up to 2×1 ft</option>
                     <option value="Medium — Up to 3×2 ft">Medium — Up to 3×2 ft</option>
@@ -328,7 +328,7 @@ ${detailsText}`;
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="category">
+                    <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="category">
                       Product Category
                     </label>
                     <select
@@ -336,7 +336,7 @@ ${detailsText}`;
                       name="category"
                       value={formData.category || initialSearchValues?.category || "Handmade Gifts & Crafts"}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm"
+                      className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px]"
                     >
                       <option value="Handmade Gifts & Crafts">Handmade Gifts & Crafts</option>
                       <option value="Personalized Gifts & Custom Products">Personalized Gifts & Custom Products</option>
@@ -348,7 +348,7 @@ ${detailsText}`;
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="requiredSpace">
+                    <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="requiredSpace">
                       Required Space Type
                     </label>
                     <select
@@ -356,7 +356,7 @@ ${detailsText}`;
                       name="requiredSpace"
                       value={formData.requiredSpace || initialSearchValues?.spaceType || "Gift Shop Counter Display"}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm"
+                      className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px]"
                     >
                       <option value="Gift Shop Counter Display">Gift Shop Counter Display</option>
                       <option value="Eye-Level Gift Shelf">Eye-Level Gift Shelf</option>
@@ -370,7 +370,7 @@ ${detailsText}`;
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="rackSize">
+                  <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="rackSize">
                     Display Space Size
                   </label>
                   <select
@@ -378,7 +378,7 @@ ${detailsText}`;
                     name="rackSize"
                     value={formData.rackSize || initialSearchValues?.rackSize || "Small — Up to 2×1 ft"}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm"
+                    className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm min-h-[44px]"
                   >
                     <option value="Small — Up to 2×1 ft">Small — Up to 2×1 ft</option>
                     <option value="Medium — Up to 3×2 ft">Medium — Up to 3×2 ft</option>
@@ -392,7 +392,7 @@ ${detailsText}`;
 
             {/* Message Field */}
             <div>
-              <label className="block text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="message">
+              <label className="block text-[11px] sm:text-xs font-bold text-[#6B0F1A] uppercase tracking-wider mb-1.5" htmlFor="message">
                 Short Message
               </label>
               <textarea
@@ -402,7 +402,7 @@ ${detailsText}`;
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Share your available gift-shop space, product category, rental preference, or any additional requirements..."
-                className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-sm"
+                className="w-full rounded-xl border border-[#F0E2E4] bg-[#FFFDF5] px-4 py-3 text-[#1F1F1F] outline-none transition placeholder:text-[#5F5F5F]/70 focus:border-[#6B0F1A] focus:ring-4 focus:ring-[#FFF6A3] text-base sm:text-sm"
               />
             </div>
 
@@ -410,14 +410,14 @@ ${detailsText}`;
             <div className="pt-2">
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#F4E409] hover:bg-[#3D0710] text-[#3D0710] hover:text-[#F4E409] border border-[#6B0F1A]/20 py-3.5 px-6 font-extrabold text-base shadow-xs transition-all cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#F4E409] hover:bg-[#3D0710] text-[#3D0710] hover:text-[#F4E409] border border-[#6B0F1A]/20 py-3.5 px-6 font-extrabold text-sm sm:text-base shadow-xs transition-all cursor-pointer min-h-[48px]"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <MessageCircle className="w-5 h-5 fill-current flex-shrink-0" />
                 <span>Submit & Continue on WhatsApp</span>
               </button>
 
-              <p className="text-xs text-[#5F5F5F] text-center mt-3 flex items-center justify-center gap-1 font-semibold">
-                <AlertCircle className="w-3.5 h-3.5 text-[#6B0F1A]" />
+              <p className="text-[11px] sm:text-xs text-[#5F5F5F] text-center mt-3 flex items-center justify-center gap-1 font-semibold">
+                <AlertCircle className="w-3.5 h-3.5 text-[#6B0F1A] flex-shrink-0" />
                 <span>Your information is used only to respond to your gift shop space enquiry.</span>
               </p>
             </div>

@@ -52,13 +52,13 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        {/* 5 Step Cards with Desktop Arrows */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 relative">
+        {/* 5 Step Cards with Desktop Arrows and Mobile Flow Lines */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-5 relative">
           {steps.map((step, idx) => {
             const IconComp = step.icon;
             return (
               <div key={step.number} className="relative flex flex-col group">
-                <div className="rounded-3xl border border-[#F0E2E4] bg-[#FFFDF5] p-5 shadow-[0_12px_35px_rgba(107,15,26,0.06)] flex flex-col items-center text-center relative group-hover:-translate-y-1.5 group-hover:scale-[1.01] group-hover:border-[#6B0F1A]/50 group-hover:shadow-[0_20px_45px_rgba(107,15,26,0.12)] transition-all duration-300 h-full">
+                <div className="rounded-2xl sm:rounded-3xl border border-[#F0E2E4] bg-[#FFFDF5] p-5 shadow-[0_12px_35px_rgba(107,15,26,0.06)] flex flex-col items-center text-center relative group-hover:-translate-y-1.5 group-hover:scale-[1.01] group-hover:border-[#6B0F1A]/50 group-hover:shadow-[0_20px_45px_rgba(107,15,26,0.12)] transition-all duration-300 h-full">
                   
                   {/* Step Number Circle */}
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#6B0F1A] font-black text-[#FFF6A3] mb-4 shadow-sm text-base border-2 border-[#F4E409] group-hover:scale-110 group-hover:bg-[#F4E409] group-hover:text-[#3D0710] group-hover:border-[#6B0F1A] transition-all duration-300">
@@ -82,6 +82,13 @@ export default function HowItWorks() {
                 {idx < steps.length - 1 && (
                   <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-10 p-1 rounded-full bg-[#F4E409] text-[#3D0710] shadow-sm border border-[#6B0F1A]/20 group-hover:translate-x-1 group-hover:bg-[#3D0710] group-hover:text-[#F4E409] transition-all duration-300">
                     <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                )}
+
+                {/* Mobile Step Flow Connector Indicator (< 1024px) */}
+                {idx < steps.length - 1 && (
+                  <div className="flex lg:hidden justify-center my-1.5 text-[#6B0F1A]/40">
+                    <div className="w-0.5 h-4 bg-[#6B0F1A]/20 rounded-full" />
                   </div>
                 )}
               </div>

@@ -47,15 +47,15 @@ export default function FAQ() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-content-${faq.id}`}
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-black text-base sm:text-lg text-[#6B0F1A] hover:text-[#3D0710] focus:outline-none transition-colors cursor-pointer group"
+                  className="w-full flex items-center justify-between gap-3 sm:gap-4 p-4 sm:p-6 text-left font-black text-sm sm:text-base lg:text-lg text-[#6B0F1A] hover:text-[#3D0710] focus:outline-none transition-colors cursor-pointer group min-h-[52px]"
                 >
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">{faq.question}</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-200 leading-snug">{faq.question}</span>
                   <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    className={`flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isOpen ? "rotate-180 bg-[#6B0F1A] text-[#FFF6A3]" : "bg-[#FFF6A3] text-[#6B0F1A] group-hover:bg-[#6B0F1A] group-hover:text-[#FFF6A3]"
                     }`}
                   >
-                    <ChevronDown className="w-5 h-5" />
+                    <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
                   </span>
                 </button>
 

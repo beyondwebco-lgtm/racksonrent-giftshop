@@ -34,12 +34,27 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Prevent auto-zoom on iOS Safari for form controls on mobile */
+@media (max-width: 640px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
