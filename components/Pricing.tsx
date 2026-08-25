@@ -25,10 +25,10 @@ export default function Pricing({ onSelectRole }: PricingProps) {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex rounded-full bg-[#FFF6A3] px-4 py-1.5 text-sm font-bold text-[#6B0F1A] border border-[#F0E2E4]">
+          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-sm font-bold text-[#650000] border border-[#F0E2E4]">
             Transparent Pricing
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#6B0F1A] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
             Simple & Transparent Options
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#5F5F5F] md:text-lg font-medium">
@@ -43,12 +43,12 @@ export default function Pricing({ onSelectRole }: PricingProps) {
               key={tier.id}
               className={`rounded-3xl border-2 p-8 flex flex-col justify-between transition-all relative ${
                 tier.highlighted
-                  ? "border-[#6B0F1A] bg-[#FFF6A3]/20 shadow-[0_16px_40px_rgba(107,15,26,0.12)]"
-                  : "border-[#F0E2E4] bg-[#FFFDF5] shadow-[0_12px_35px_rgba(107,15,26,0.06)]"
+                  ? "border-[#650000] bg-[#FFFBCC]/30 shadow-[0_16px_40px_rgba(101,0,0,0.12)]"
+                  : "border-[#F0E2E4] bg-[#FFFDF5] shadow-[0_12px_35px_rgba(101,0,0,0.06)]"
               }`}
             >
               {tier.highlighted && (
-                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#6B0F1A] text-[#FFF6A3] text-xs font-black px-4 py-1 rounded-full border border-[#F4E409]">
+                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#650000] text-[#FFFBCC] text-xs font-black px-4 py-1 rounded-full border border-[#FAFA33]">
                   Most Popular
                 </span>
               )}
@@ -56,22 +56,22 @@ export default function Pricing({ onSelectRole }: PricingProps) {
               <div>
                 <div className="flex items-center justify-between gap-4 mb-4">
                   <div>
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#6B0F1A]">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#650000]">
                       {tier.targetRole}
                     </span>
-                    <h3 className="text-2xl font-black text-[#6B0F1A] mt-1">
+                    <h3 className="text-2xl font-black text-[#650000] mt-1">
                       {tier.title}
                     </h3>
                   </div>
 
-                  <div className="p-3 rounded-2xl bg-[#FFF6A3] text-[#6B0F1A]">
+                  <div className="p-3 rounded-2xl bg-[#FFFBCC] text-[#650000]">
                     {tier.roleType === "gym-owner" ? <Store className="w-6 h-6" /> : <Utensils className="w-6 h-6" />}
                   </div>
                 </div>
 
 
                 <div className="my-6 pb-6 border-b border-[#F0E2E4]">
-                  <span className="text-4xl font-black text-[#6B0F1A]">
+                  <span className="text-4xl font-black text-[#650000]">
                     {tier.priceDisplay}
                   </span>
                   <span className="text-sm font-bold text-[#5F5F5F] ml-2">
@@ -85,7 +85,7 @@ export default function Pricing({ onSelectRole }: PricingProps) {
                 <div className="space-y-3 mb-8">
                   {tier.features.map((feat, idx) => (
                     <div key={idx} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#6B0F1A] flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-[#650000] flex-shrink-0" />
                       <span className="text-sm font-extrabold text-[#1F1F1F]">{feat}</span>
                     </div>
                   ))}
@@ -97,8 +97,8 @@ export default function Pricing({ onSelectRole }: PricingProps) {
                 onClick={() => handlePricingClick(tier.roleType)}
                 className={`w-full py-4 px-6 rounded-full font-extrabold transition-all shadow-xs cursor-pointer text-center ${
                   tier.highlighted
-                    ? "bg-[#F4E409] text-[#3D0710] border border-[#6B0F1A]/20 hover:bg-[#3D0710] hover:text-[#F4E409]"
-                    : "bg-[#6B0F1A] text-[#FFF6A3] hover:bg-[#3D0710] hover:text-[#F4E409]"
+                    ? "bg-[#FAFA33] text-[#650000] border border-[#650000]/20 hover:bg-[#650000] hover:text-[#FAFA33]"
+                    : "bg-[#650000] text-[#FFFBCC] hover:bg-[#650000] hover:text-[#FAFA33]"
                 }`}
               >
                 {tier.ctaLabel}

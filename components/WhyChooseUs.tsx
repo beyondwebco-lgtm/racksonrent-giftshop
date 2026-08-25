@@ -16,10 +16,10 @@ export default function WhyChooseUs() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex rounded-full bg-[#FFF6A3] px-4 py-1.5 text-sm font-bold text-[#6B0F1A] border border-[#F0E2E4]">
+          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-sm font-bold text-[#650000] border border-[#F0E2E4]">
             Platform Advantages
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#6B0F1A] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
             Why Choose Racks on Rent?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#5F5F5F] md:text-lg font-medium">
@@ -35,13 +35,13 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={item.id}
-                className="group rounded-2xl sm:rounded-3xl border-2 border-[#F0E2E4] bg-[#FFFDF5] p-5 sm:p-6 shadow-[0_12px_35px_rgba(107,15,26,0.06)] hover:shadow-[0_20px_50px_rgba(107,15,26,0.14)] hover:border-[#6B0F1A]/50 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] flex flex-col justify-between"
+                className="group rounded-2xl sm:rounded-3xl border-2 border-[#F0E2E4] bg-[#FFFDF5] p-5 sm:p-6 shadow-[0_12px_35px_rgba(101,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(101,0,0,0.14)] hover:border-[#650000]/50 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#FFF6A3] mb-4 sm:mb-5 shadow-xs group-hover:bg-[#6B0F1A] transition-colors duration-300">
-                    <IconComp className="w-6 h-6 sm:w-8 sm:h-8 text-[#6B0F1A] group-hover:text-[#FFF6A3] group-hover:scale-110 transition-all duration-300" />
+                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#FFFBCC] mb-4 sm:mb-5 shadow-xs group-hover:bg-[#650000] transition-colors duration-300">
+                    <IconComp className="w-6 h-6 sm:w-8 sm:h-8 text-[#650000] group-hover:text-[#FFFBCC] group-hover:scale-110 transition-all duration-300" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-black text-[#6B0F1A] mb-2 sm:mb-2.5 group-hover:text-[#3D0710] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-black text-[#650000] mb-2 sm:mb-2.5 group-hover:text-[#650000] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#5F5F5F] leading-relaxed font-medium">

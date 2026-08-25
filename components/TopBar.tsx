@@ -4,18 +4,18 @@ import { SITE_CONFIG } from "@/data/config";
 
 export default function TopBar() {
   return (
-    <div className="bg-[#6B0F1A] text-white text-[10px] min-[360px]:text-[11px] sm:text-xs border-b border-[#3D0710] py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 font-semibold relative z-50 overflow-hidden">
+    <div className="bg-[#650000] text-white text-[10px] min-[360px]:text-[11px] sm:text-xs border-b border-black/20 py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 font-semibold relative z-50 overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Left Side */}
-        <div className="flex items-center gap-1 sm:gap-1.5 text-[#FFF6A3] min-w-0 flex-1 sm:flex-initial">
-          <Users className="w-3.5 h-3.5 text-[#F4E409] flex-shrink-0" />
+        <div className="flex items-center gap-1 sm:gap-1.5 text-[#FFFBCC] min-w-0 flex-1 sm:flex-initial">
+          <Users className="w-3.5 h-3.5 text-[#FAFA33] flex-shrink-0" />
           <span className="truncate">{SITE_CONFIG.topBarTextLeft}</span>
         </div>
 
         {/* Centre Side */}
         <div className="hidden md:flex items-center gap-1.5 text-white/90 font-medium flex-shrink-0">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#F4E409] flex-shrink-0" />
+          <ShieldCheck className="w-3.5 h-3.5 text-[#FAFA33] flex-shrink-0" />
           <span>{SITE_CONFIG.topBarTextCenter}</span>
         </div>
 
@@ -23,21 +23,21 @@ export default function TopBar() {
         <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
           <a
             href={SITE_CONFIG.telLink}
-            className="flex items-center gap-1 hover:text-[#F4E409] transition-colors py-1 focus:outline-none"
+            className="flex items-center gap-1 hover:text-[#FAFA33] transition-colors py-1 focus:outline-none"
             aria-label={`Call ${SITE_CONFIG.phoneFormatted}`}
           >
-            <Phone className="w-3 h-3 text-[#F4E409] flex-shrink-0" />
+            <Phone className="w-3 h-3 text-[#FAFA33] flex-shrink-0" />
             <span className="whitespace-nowrap">{SITE_CONFIG.phoneFormatted}</span>
           </a>
 
-          <span className="text-[#F4E409]/40 hidden sm:inline">•</span>
+          <span className="text-[#FAFA33]/40 hidden sm:inline">•</span>
 
           <a
             href={SITE_CONFIG.mailtoLink}
-            className="hidden sm:flex items-center gap-1 hover:text-[#F4E409] transition-colors py-1 focus:outline-none"
+            className="hidden sm:flex items-center gap-1 hover:text-[#FAFA33] transition-colors py-1 focus:outline-none"
             aria-label={`Email ${SITE_CONFIG.email}`}
           >
-            <Mail className="w-3 h-3 text-[#F4E409] flex-shrink-0" />
+            <Mail className="w-3 h-3 text-[#FAFA33] flex-shrink-0" />
             <span className="truncate">{SITE_CONFIG.email}</span>
           </a>
         </div>

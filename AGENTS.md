@@ -9,14 +9,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 <!-- END:nextjs-agent-rules -->
 
 # Site Colors & Theme Tokens
-
+ 
 The design system for **Racks on Rent** relies on the following official color palette:
-
-- **Primary Maroon**: `#6B0F1A` (`--color-primary-maroon`, `--primary`, `--heading`) — Main brand color, primary headers, key branding elements.
-- **Dark Maroon**: `#3D0710` (`--color-dark-maroon`, `--primary-dark`, `--background-maroon`) — Dark backgrounds, footer, hover states.
-- **Lemon Yellow**: `#F4E409` (`--color-lemon-yellow`, `--accent`) — Primary action/CTA buttons, vibrant accents, key highlights.
-- **Soft Lemon**: `#FFF6A3` (`--color-soft-lemon`, `--accent-light`, `--background-soft`) — Badge backgrounds, soft highlighted cards, secondary accents.
-- **Warm White**: `#FFFDF5` (`--color-warm-white`, `--background`, `--surface`) — Main page background and warm card containers.
+ 
+- **Primary Maroon**: `#650000` (`--color-primary`, `--color-primary-maroon`, `--primary`, `--heading`) — Main brand color, primary headers, key branding elements, navigation, dark containers, and footer.
+- **Lemon Yellow**: `#FAFA33` (`--color-secondary`, `--color-lemon-yellow`, `--secondary`) — Primary action/CTA buttons, vibrant accents, key highlights, and active states.
+- **Warm Cream / Warm White**: `#FFFDF5` (`--color-background`, `--color-warm-white`, `--background`, `--surface`) — Main page background and warm card containers.
+- **Dark Charcoal**: `#1F1F1F` (`--color-dark-text`, `--color-text`, `--text`) — Main body text, input text, and readable content.
+- **Soft Lemon**: `#FFFBCC` (`--color-accent`, `--color-soft-lemon`, `--accent`, `--accent-light`, `--background-soft`) — Badge backgrounds, soft highlighted cards, secondary accents, and focus states.
 - **Soft Border**: `#F0E2E4` (`--color-soft-border`, `--border`) — Subtle border lines and card dividers.
-- **Dark Text**: `#1F1F1F` (`--color-dark-text`, `--text`) — Main body text for high readability.
 - **Muted Text**: `#5F5F5F` (`--color-muted-text`, `--text-muted`) — Subtitles, captions, and secondary text.

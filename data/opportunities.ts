@@ -22,7 +22,7 @@ export const SAMPLE_OPPORTUNITIES: OpportunityExample[] = [
     arrangement: "Monthly Gift Shop Space Rental",
     badgeText: "Featured Gift Store",
     description: "Prime eye-level display counter inside a popular gift boutique serving 500+ daily shoppers.",
-    bgGradient: "from-[#3D0710] to-[#6B0F1A]"
+    bgGradient: "from-[#650000] to-[#650000]"
   },
   {
     id: "checkout-gift-rack",
@@ -46,7 +46,7 @@ export const SAMPLE_OPPORTUNITIES: OpportunityExample[] = [
     arrangement: "Monthly Sublet Space Arrangement",
     badgeText: "Protected Showcase",
     description: "Illuminated glass showcase cabinet positioned right near the main entrance.",
-    bgGradient: "from-[#3D0710] to-[#6B0F1A]"
+    bgGradient: "from-[#650000] to-[#650000]"
   },
   {
     id: "lifestyle-decor-wall",

@@ -17,10 +17,10 @@ export default function FAQ() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex rounded-full bg-[#FFF6A3] px-4 py-1.5 text-sm font-bold text-[#6B0F1A] border border-[#F0E2E4]">
+          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-sm font-bold text-[#650000] border border-[#F0E2E4]">
             Got Questions?
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#6B0F1A] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#5F5F5F] md:text-lg font-medium">
@@ -37,8 +37,8 @@ export default function FAQ() {
                 key={faq.id}
                 className={`rounded-2xl border transition-all duration-300 shadow-xs overflow-hidden ${
                   isOpen
-                    ? "border-[#6B0F1A] bg-[#FFF6A3]/40 shadow-sm"
-                    : "border-[#F0E2E4] bg-[#FFFDF5] hover:border-[#6B0F1A]/50 hover:bg-[#FFF6A3]/20 hover:-translate-y-0.5"
+                    ? "border-[#650000] bg-[#FFFBCC]/40 shadow-sm"
+                    : "border-[#F0E2E4] bg-[#FFFDF5] hover:border-[#650000]/50 hover:bg-[#FFFBCC]/20 hover:-translate-y-0.5"
                 }`}
               >
                 <button
@@ -47,12 +47,12 @@ export default function FAQ() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-content-${faq.id}`}
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full flex items-center justify-between gap-3 sm:gap-4 p-4 sm:p-6 text-left font-black text-sm sm:text-base lg:text-lg text-[#6B0F1A] hover:text-[#3D0710] focus:outline-none transition-colors cursor-pointer group min-h-[52px]"
+                  className="w-full flex items-center justify-between gap-3 sm:gap-4 p-4 sm:p-6 text-left font-black text-sm sm:text-base lg:text-lg text-[#650000] hover:text-[#650000] focus:outline-none transition-colors cursor-pointer group min-h-[52px]"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-200 leading-snug">{faq.question}</span>
                   <span
                     className={`flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      isOpen ? "rotate-180 bg-[#6B0F1A] text-[#FFF6A3]" : "bg-[#FFF6A3] text-[#6B0F1A] group-hover:bg-[#6B0F1A] group-hover:text-[#FFF6A3]"
+                      isOpen ? "rotate-180 bg-[#650000] text-[#FFFBCC]" : "bg-[#FFFBCC] text-[#650000] group-hover:bg-[#650000] group-hover:text-[#FFFBCC]"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />

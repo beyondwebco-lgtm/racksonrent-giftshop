@@ -76,16 +76,16 @@ export default function AboutUs() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF6A3] px-4 py-1.5 text-xs sm:text-sm font-bold text-[#6B0F1A] border border-[#F0E2E4]">
-            <Sparkles className="w-3.5 h-3.5 text-[#6B0F1A]" />
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FFFBCC] px-4 py-1.5 text-xs sm:text-sm font-bold text-[#650000] border border-[#F0E2E4]">
+            <Sparkles className="w-3.5 h-3.5 text-[#650000]" />
             <span>India&apos;s First Commercial Display Space Marketplace</span>
           </span>
           
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#6B0F1A] md:text-5xl leading-tight">
-            About <span className="bg-[#F4E409] text-[#3D0710] px-3 py-0.5 rounded-xl inline-block border border-[#6B0F1A]/20">Racks on Rent</span>
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl leading-tight">
+            About <span className="bg-[#FAFA33] text-[#650000] px-3 py-0.5 rounded-xl inline-block border border-[#650000]/20">Racks on Rent</span>
           </h2>
           
-          <p className="mt-4 text-lg font-bold text-[#3D0710] sm:text-xl">
+          <p className="mt-4 text-lg font-bold text-[#650000] sm:text-xl">
             Transforming Unused Commercial Space into Business Opportunities
           </p>
         </div>
@@ -93,17 +93,17 @@ export default function AboutUs() {
         {/* Intro Story Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-stretch">
           
-          {/* Main Intro Text Box (#6B0F1A Maroon) */}
-          <div className="lg:col-span-7 bg-[#6B0F1A] text-white rounded-3xl border-2 border-[#3D0710] p-6 sm:p-8 shadow-[0_16px_40px_rgba(107,15,26,0.20)] flex flex-col justify-between">
+          {/* Main Intro Text Box (#650000 Maroon) */}
+          <div className="lg:col-span-7 bg-[#650000] text-white rounded-3xl border-2 border-black/20 p-6 sm:p-8 shadow-[0_16px_40px_rgba(101,0,0,0.20)] flex flex-col justify-between">
             <div>
-              <span className="text-xs font-extrabold text-[#F4E409] uppercase tracking-wider block mb-2">
+              <span className="text-xs font-extrabold text-[#FAFA33] uppercase tracking-wider block mb-2">
                 Who We Are
               </span>
-              <h3 className="text-xl sm:text-2xl font-black text-[#FFF6A3] mb-4">
+              <h3 className="text-xl sm:text-2xl font-black text-[#FFFBCC] mb-4">
                 Redefining the Future of Commercial Space Utilization
               </h3>
               <p className="text-sm sm:text-base text-[#FFFDF5]/90 leading-relaxed font-medium mb-4">
-                At <strong className="text-[#F4E409] font-black">RACKS ON RENT</strong>, we are redefining the future of commercial space utilization by transforming underutilized racks, shelves, kiosks, display counters, and business corners into revenue-generating business opportunities.
+                At <strong className="text-[#FAFA33] font-black">RACKS ON RENT</strong>, we are redefining the future of commercial space utilization by transforming underutilized racks, shelves, kiosks, display counters, and business corners into revenue-generating business opportunities.
               </p>
               <p className="text-sm sm:text-base text-[#FFFDF5]/90 leading-relaxed font-medium">
                 Our technology-driven marketplace connects commercial space owners with brands, startups, entrepreneurs, and retailers seeking affordable, high-visibility locations to showcase their products and services. By unlocking the value of existing infrastructure, we create a sustainable ecosystem where businesses expand faster while commercial establishments generate recurring income from previously unused spaces.
@@ -111,16 +111,16 @@ export default function AboutUs() {
             </div>
 
             {/* Venue Types Badge List */}
-            <div className="mt-6 pt-6 border-t border-[#FFF6A3]/20">
-              <span className="text-xs font-extrabold text-[#F4E409] uppercase tracking-wider block mb-3 flex items-center gap-1.5">
-                <Building2 className="w-4 h-4 text-[#F4E409]" />
+            <div className="mt-6 pt-6 border-t border-[#FFFBCC]/20">
+              <span className="text-xs font-extrabold text-[#FAFA33] uppercase tracking-wider block mb-3 flex items-center gap-1.5">
+                <Building2 className="w-4 h-4 text-[#FAFA33]" />
                 <span>Empowering Every Commercial Establishment</span>
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {venueTypes.map((venue, idx) => (
                   <span
                     key={idx}
-                    className="px-2.5 py-1 rounded-full bg-[#3D0710] text-[#FFF6A3] text-xs font-extrabold border border-[#F4E409]/30"
+                    className="px-2.5 py-1 rounded-full bg-black/30 text-[#FFFBCC] text-xs font-extrabold border border-[#FAFA33]/30"
                   >
                     {venue}
                   </span>
@@ -129,21 +129,21 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Purpose & Why We Exist Right Cards (#6B0F1A Maroon) */}
+          {/* Purpose & Why We Exist Right Cards (#650000 Maroon) */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             
             {/* Our Purpose Card */}
-            <div className="bg-[#6B0F1A] text-[#FFF6A3] rounded-3xl p-6 sm:p-8 shadow-[0_16px_40px_rgba(107,15,26,0.20)] border-2 border-[#3D0710] flex-1 flex flex-col justify-between">
+            <div className="bg-[#650000] text-[#FFFBCC] rounded-3xl p-6 sm:p-8 shadow-[0_16px_40px_rgba(101,0,0,0.20)] border-2 border-black/20 flex-1 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="p-2 rounded-xl bg-[#F4E409] text-[#3D0710]">
+                  <div className="p-2 rounded-xl bg-[#FAFA33] text-[#650000]">
                     <Compass className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#F4E409]">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#FAFA33]">
                     Our Purpose
                   </span>
                 </div>
-                <h4 className="text-lg sm:text-xl font-extrabold text-[#FFF6A3] mb-3">
+                <h4 className="text-lg sm:text-xl font-extrabold text-[#FFFBCC] mb-3">
                   Creating Shared Success Through Smart Space Utilization
                 </h4>
                 <p className="text-xs sm:text-sm text-[#FFFDF5]/90 leading-relaxed font-medium">
@@ -153,12 +153,12 @@ export default function AboutUs() {
             </div>
 
             {/* Why We Exist Card */}
-            <div className="bg-[#6B0F1A] text-[#FFF6A3] rounded-3xl p-6 sm:p-8 shadow-[0_16px_40px_rgba(107,15,26,0.20)] border-2 border-[#3D0710]">
+            <div className="bg-[#650000] text-[#FFFBCC] rounded-3xl p-6 sm:p-8 shadow-[0_16px_40px_rgba(101,0,0,0.20)] border-2 border-black/20">
               <div className="flex items-center gap-2 mb-3">
-                <div className="p-2 rounded-xl bg-[#F4E409] text-[#3D0710]">
+                <div className="p-2 rounded-xl bg-[#FAFA33] text-[#650000]">
                   <Store className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-extrabold uppercase tracking-wider text-[#F4E409]">
+                <span className="text-xs font-extrabold uppercase tracking-wider text-[#FAFA33]">
                   Why We Exist
                 </span>
               </div>
@@ -170,20 +170,20 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Vision & Mission Cards (#6B0F1A Maroon) */}
+        {/* Vision & Mission Cards (#650000 Maroon) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           
           {/* Vision Card */}
-          <div className="bg-[#6B0F1A] rounded-3xl border-2 border-[#3D0710] p-6 sm:p-8 shadow-[0_16px_40px_rgba(107,15,26,0.20)] hover:shadow-xl transition-shadow relative overflow-hidden group">
+          <div className="bg-[#650000] rounded-3xl border-2 border-black/20 p-6 sm:p-8 shadow-[0_16px_40px_rgba(101,0,0,0.20)] hover:shadow-xl transition-shadow relative overflow-hidden group">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-2xl bg-[#F4E409] text-[#3D0710]">
+              <div className="p-3 rounded-2xl bg-[#FAFA33] text-[#650000]">
                 <Eye className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs font-extrabold text-[#F4E409] uppercase tracking-wider block">
+                <span className="text-xs font-extrabold text-[#FAFA33] uppercase tracking-wider block">
                   Future Roadmap
                 </span>
-                <h3 className="text-xl font-extrabold text-[#FFF6A3]">Our Vision</h3>
+                <h3 className="text-xl font-extrabold text-[#FFFBCC]">Our Vision</h3>
               </div>
             </div>
             <p className="text-sm sm:text-base text-[#FFFDF5]/90 leading-relaxed font-medium">
@@ -192,16 +192,16 @@ export default function AboutUs() {
           </div>
 
           {/* Mission Card */}
-          <div className="bg-[#6B0F1A] rounded-3xl border-2 border-[#3D0710] p-6 sm:p-8 shadow-[0_16px_40px_rgba(107,15,26,0.20)] hover:shadow-xl transition-shadow relative overflow-hidden group">
+          <div className="bg-[#650000] rounded-3xl border-2 border-black/20 p-6 sm:p-8 shadow-[0_16px_40px_rgba(101,0,0,0.20)] hover:shadow-xl transition-shadow relative overflow-hidden group">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-2xl bg-[#F4E409] text-[#3D0710]">
+              <div className="p-3 rounded-2xl bg-[#FAFA33] text-[#650000]">
                 <Target className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs font-extrabold text-[#F4E409] uppercase tracking-wider block">
+                <span className="text-xs font-extrabold text-[#FAFA33] uppercase tracking-wider block">
                   Our Commitment
                 </span>
-                <h3 className="text-xl font-extrabold text-[#FFF6A3]">Our Mission</h3>
+                <h3 className="text-xl font-extrabold text-[#FFFBCC]">Our Mission</h3>
               </div>
             </div>
             <p className="text-sm sm:text-base text-[#FFFDF5]/90 leading-relaxed font-medium">
@@ -211,13 +211,13 @@ export default function AboutUs() {
 
         </div>
 
-        {/* Our Core Values Section (#6B0F1A Maroon Cards) */}
+        {/* Our Core Values Section (#650000 Maroon Cards) */}
         <div className="mb-16">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-extrabold text-[#6B0F1A] uppercase tracking-wider block">
+            <span className="text-xs font-extrabold text-[#650000] uppercase tracking-wider block">
               What Drives Us
             </span>
-            <h3 className="mt-1 text-2xl sm:text-3xl font-extrabold text-[#6B0F1A]">
+            <h3 className="mt-1 text-2xl sm:text-3xl font-extrabold text-[#650000]">
               Our Core Values
             </h3>
           </div>
@@ -228,13 +228,13 @@ export default function AboutUs() {
               return (
                 <div
                   key={idx}
-                  className="bg-[#6B0F1A] rounded-2xl border-2 border-[#3D0710] p-5 shadow-[0_8px_24px_rgba(107,15,26,0.18)] hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between"
+                  className="bg-[#650000] rounded-2xl border-2 border-black/20 p-5 shadow-[0_8px_24px_rgba(101,0,0,0.18)] hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-[#F4E409] flex items-center justify-center text-[#3D0710] mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#FAFA33] flex items-center justify-center text-[#650000] mb-3">
                       <IconComponent className="w-5 h-5" />
                     </div>
-                    <h4 className="font-extrabold text-base text-[#FFF6A3] mb-2">
+                    <h4 className="font-extrabold text-base text-[#FFFBCC] mb-2">
                       {val.name}
                     </h4>
                     <p className="text-xs text-[#FFFDF5]/90 leading-relaxed font-medium">
@@ -247,13 +247,13 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Why Choose Racks on Rent Section Box (#6B0F1A Maroon Container) */}
-        <div className="bg-[#6B0F1A] rounded-3xl border-2 border-[#3D0710] p-6 sm:p-10 shadow-[0_20px_50px_rgba(107,15,26,0.25)]">
+        {/* Why Choose Racks on Rent Section Box (#650000 Maroon Container) */}
+        <div className="bg-[#650000] rounded-3xl border-2 border-black/20 p-6 sm:p-10 shadow-[0_20px_50px_rgba(101,0,0,0.25)]">
           <div className="text-center max-w-3xl mx-auto mb-8">
-            <span className="inline-flex rounded-full bg-[#F4E409] px-3.5 py-1 text-xs font-extrabold text-[#3D0710] mb-2">
+            <span className="inline-flex rounded-full bg-[#FAFA33] px-3.5 py-1 text-xs font-extrabold text-[#650000] mb-2">
               Competitive Advantage
             </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#FFF6A3]">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#FFFBCC]">
               Why Choose RACKS ON RENT?
             </h3>
             <p className="mt-2 text-sm sm:text-base text-[#FFFDF5]/90 font-medium">
@@ -265,12 +265,12 @@ export default function AboutUs() {
             {whyChooseItems.map((item, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-3 bg-[#3D0710] p-3.5 rounded-xl border border-[#F4E409]/30 shadow-2xs hover:border-[#F4E409]/60 transition-colors"
+                className="flex items-center gap-3 bg-black/25 p-3.5 rounded-xl border border-[#FAFA33]/30 shadow-2xs hover:border-[#FAFA33]/60 transition-colors"
               >
-                <div className="p-1.5 rounded-lg bg-[#F4E409] text-[#3D0710] flex-shrink-0">
+                <div className="p-1.5 rounded-lg bg-[#FAFA33] text-[#650000] flex-shrink-0">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
-                <span className="text-xs sm:text-sm font-extrabold text-[#FFF6A3]">
+                <span className="text-xs sm:text-sm font-extrabold text-[#FFFBCC]">
                   {item}
                 </span>
               </div>

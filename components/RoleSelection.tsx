@@ -25,10 +25,10 @@ export default function RoleSelection({ onSelectRole }: RoleSelectionProps) {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex rounded-full bg-[#FFF6A3] px-4 py-1.5 text-sm font-bold text-[#6B0F1A] border border-[#F0E2E4]">
+          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-sm font-bold text-[#650000] border border-[#F0E2E4]">
             Role Selection
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#6B0F1A] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
             Choose What Best Describes You
           </h2>
         </div>
@@ -40,15 +40,15 @@ export default function RoleSelection({ onSelectRole }: RoleSelectionProps) {
             return (
               <div
                 key={card.id}
-                className="rounded-3xl border-2 border-[#F0E2E4] bg-[#FFFDF5] p-8 shadow-[0_12px_35px_rgba(107,15,26,0.06)] hover:shadow-[0_20px_50px_rgba(107,15,26,0.14)] hover:border-[#6B0F1A]/40 transition-all hover:-translate-y-1 flex flex-col justify-between group"
+                className="rounded-3xl border-2 border-[#F0E2E4] bg-[#FFFDF5] p-8 shadow-[0_12px_35px_rgba(101,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(101,0,0,0.14)] hover:border-[#650000]/40 transition-all hover:-translate-y-1 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF6A3] text-[#6B0F1A] mb-6 shadow-xs">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFFBCC] text-[#650000] mb-6 shadow-xs">
                     {isGymOwner ? <Store className="w-6 h-6" /> : <Utensils className="w-6 h-6" />}
                   </div>
 
 
-                  <h3 className="text-2xl font-black text-[#6B0F1A] mb-3">
+                  <h3 className="text-2xl font-black text-[#650000] mb-3">
                     {card.heading}
                   </h3>
 
@@ -59,7 +59,7 @@ export default function RoleSelection({ onSelectRole }: RoleSelectionProps) {
                   <div className="space-y-3 mb-8">
                     {card.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-[#6B0F1A] flex-shrink-0" />
+                        <CheckCircle2 className="w-5 h-5 text-[#650000] flex-shrink-0" />
                         <span className="text-sm font-extrabold text-[#1F1F1F]">{benefit}</span>
                       </div>
                     ))}
@@ -71,8 +71,8 @@ export default function RoleSelection({ onSelectRole }: RoleSelectionProps) {
                   onClick={() => handleRoleClick(card.role)}
                   className={`w-full py-3.5 px-6 rounded-full font-extrabold transition-all shadow-xs cursor-pointer text-center ${
                     isGymOwner
-                      ? "bg-[#F4E409] text-[#3D0710] border border-[#6B0F1A]/20 hover:bg-[#3D0710] hover:text-[#F4E409]"
-                      : "bg-[#6B0F1A] text-[#FFF6A3] hover:bg-[#3D0710] hover:text-[#F4E409]"
+                      ? "bg-[#FAFA33] text-[#650000] border border-[#650000]/20 hover:bg-[#650000] hover:text-[#FAFA33]"
+                      : "bg-[#650000] text-[#FFFBCC] hover:bg-[#650000] hover:text-[#FAFA33]"
                   }`}
                 >
                   {card.ctaLabel}

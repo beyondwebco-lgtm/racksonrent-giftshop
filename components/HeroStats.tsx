@@ -12,7 +12,7 @@ export default function HeroStats() {
       prefix: "",
       suffix: "+",
       label: "Gift Shop Spaces Listed",
-      icon: <Layers className="w-6 h-6 text-[#F4E409] group-hover:scale-110 transition-transform duration-300" />,
+      icon: <Layers className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
     },
     {
       id: "brands",
@@ -20,7 +20,7 @@ export default function HeroStats() {
       prefix: "",
       suffix: "+",
       label: "Gift Brands Connected",
-      icon: <Store className="w-6 h-6 text-[#F4E409] group-hover:scale-110 transition-transform duration-300" />,
+      icon: <Store className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
     },
     {
       id: "earnings",
@@ -28,25 +28,25 @@ export default function HeroStats() {
       prefix: "₹ ",
       suffix: " Lakhs+",
       label: "Extra Income Generated",
-      icon: <TrendingUp className="w-6 h-6 text-[#F4E409] group-hover:scale-110 transition-transform duration-300" />,
+      icon: <TrendingUp className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
     },
   ];
 
   return (
-    <div className="bg-[#6B0F1A] text-white py-5 sm:py-6 border-y border-[#3D0710] shadow-md">
+    <div className="bg-[#650000] text-white py-5 sm:py-6 border-y border-black/20 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-[#3D0710]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/15">
           {statsList.map((stat, idx) => (
             <div
               key={stat.id}
-              className={`flex flex-col items-center justify-center space-y-1 p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#3D0710]/40 group cursor-default ${
+              className={`flex flex-col items-center justify-center space-y-1 p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-black/20 group cursor-default ${
                 idx > 0 ? "pt-4 sm:pt-3" : ""
               }`}
             >
-              <div className="p-2 sm:p-2.5 rounded-2xl bg-[#3D0710]/50 mb-0.5 sm:mb-1 group-hover:bg-[#3D0710] transition-colors">
+              <div className="p-2 sm:p-2.5 rounded-2xl bg-black/25 mb-0.5 sm:mb-1 group-hover:bg-black/40 transition-colors">
                 {stat.icon}
               </div>
-              <span className="text-2xl min-[360px]:text-3xl sm:text-4xl font-black text-[#F4E409] tracking-tight">
+              <span className="text-2xl min-[360px]:text-3xl sm:text-4xl font-black text-[#FAFA33] tracking-tight">
                 <AnimatedCounter
                   targetNumber={stat.targetNumber}
                   prefix={stat.prefix}

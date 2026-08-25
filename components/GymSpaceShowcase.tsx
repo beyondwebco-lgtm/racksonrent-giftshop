@@ -164,10 +164,10 @@ export default function GymSpaceShowcase({
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-flex rounded-full bg-[#FFF6A3] px-4 py-1.5 text-xs sm:text-sm font-bold text-[#6B0F1A] border border-[#F0E2E4]">
+          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-xs sm:text-sm font-bold text-[#650000] border border-[#F0E2E4]">
             Gift Shop Display Opportunities
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#6B0F1A] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
             <span className="hidden sm:inline">Choose What You Want to Display Inside a Gift Shop</span>
             <span className="sm:hidden">Explore Gift Shop Display Formats</span>
           </h2>
@@ -195,11 +195,11 @@ export default function GymSpaceShowcase({
                   }}
                   className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold border transition-all cursor-pointer ${
                     isActive
-                      ? "bg-[#6B0F1A] text-[#FFF6A3] border-[#F4E409] shadow-md scale-[1.02] sm:scale-105"
-                      : "bg-[#FFFDF5] text-[#6B0F1A] border-[#F0E2E4] hover:bg-[#FFF6A3]/40"
+                      ? "bg-[#650000] text-[#FFFBCC] border-[#FAFA33] shadow-md scale-[1.02] sm:scale-105"
+                      : "bg-[#FFFDF5] text-[#650000] border-[#F0E2E4] hover:bg-[#FFFBCC]/60"
                   }`}
                 >
-                  <IconComp className={`w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 ${isActive ? "text-[#F4E409]" : "text-[#6B0F1A]"}`} />
+                  <IconComp className={`w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 ${isActive ? "text-[#FAFA33]" : "text-[#650000]"}`} />
                   <span className="whitespace-normal text-left">{cat.shortName}</span>
                 </button>
               );
@@ -212,14 +212,14 @@ export default function GymSpaceShowcase({
           ref={showcaseRef}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative bg-[#FFFDF5] rounded-2xl sm:rounded-3xl border-2 border-[#6B0F1A] p-4 sm:p-10 px-4 min-[400px]:px-8 sm:px-14 lg:px-16 shadow-[0_24px_70px_rgba(107,15,26,0.12)] overflow-hidden"
+          className="relative bg-[#FFFDF5] rounded-2xl sm:rounded-3xl border-2 border-[#650000] p-4 sm:p-10 px-4 min-[400px]:px-8 sm:px-14 lg:px-16 shadow-[0_24px_70px_rgba(101,0,0,0.12)] overflow-hidden"
         >
           {/* Left Arrow Button */}
           <button
             type="button"
             onClick={handlePrev}
             aria-label="Previous space category"
-            className="absolute left-1.5 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#6B0F1A] text-[#FFF6A3] border-2 border-[#F4E409] flex items-center justify-center shadow-lg hover:bg-[#3D0710] hover:text-[#F4E409] hover:scale-105 transition-all cursor-pointer active:scale-95"
+            className="absolute left-1.5 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#650000] text-[#FFFBCC] border-2 border-[#FAFA33] flex items-center justify-center shadow-lg hover:bg-[#650000] hover:text-[#FAFA33] hover:scale-105 transition-all cursor-pointer active:scale-95"
           >
             <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
@@ -229,7 +229,7 @@ export default function GymSpaceShowcase({
             type="button"
             onClick={handleNext}
             aria-label="Next space category"
-            className="absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#6B0F1A] text-[#FFF6A3] border-2 border-[#F4E409] flex items-center justify-center shadow-lg hover:bg-[#3D0710] hover:text-[#F4E409] hover:scale-105 transition-all cursor-pointer active:scale-95"
+            className="absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#650000] text-[#FFFBCC] border-2 border-[#FAFA33] flex items-center justify-center shadow-lg hover:bg-[#650000] hover:text-[#FAFA33] hover:scale-105 transition-all cursor-pointer active:scale-95"
           >
             <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
@@ -243,10 +243,10 @@ export default function GymSpaceShowcase({
               }`}
             >
               <div>
-                <span className="inline-flex rounded-full bg-[#FFF6A3] px-3.5 py-1 text-xs font-black text-[#6B0F1A] border border-[#6B0F1A]/20">
+                <span className="inline-flex rounded-full bg-[#FFFBCC] px-3.5 py-1 text-xs font-black text-[#650000] border border-[#650000]/20">
                   {activeCategory.eyebrow}
                 </span>
-                <h3 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#6B0F1A] leading-snug">
+                <h3 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#650000] leading-snug">
                   {activeCategory.title}
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-[#5F5F5F] leading-relaxed font-medium">
@@ -256,7 +256,7 @@ export default function GymSpaceShowcase({
 
               {/* Suitable Products / Services */}
               <div>
-                <span className="block text-xs font-extrabold text-[#6B0F1A] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <span className="block text-xs font-extrabold text-[#650000] uppercase tracking-wider mb-2 flex items-center gap-1.5">
                   <Tag className="w-3.5 h-3.5" />
                   <span>Suitable For</span>
                 </span>
@@ -264,7 +264,7 @@ export default function GymSpaceShowcase({
                   {activeCategory.suitableFor.map((item, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 rounded-lg bg-[#FFF6A3]/60 text-[#3D0710] text-xs font-bold border border-[#6B0F1A]/10"
+                      className="px-2.5 py-1 rounded-lg bg-[#FFFBCC]/60 text-[#650000] text-xs font-bold border border-[#650000]/10"
                     >
                       {item}
                     </span>
@@ -274,14 +274,14 @@ export default function GymSpaceShowcase({
 
               {/* Key Benefits */}
               <div>
-                <span className="block text-xs font-extrabold text-[#6B0F1A] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <span className="block text-xs font-extrabold text-[#650000] uppercase tracking-wider mb-2 flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Key Benefits</span>
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {activeCategory.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-[#1F1F1F] font-extrabold">
-                      <CheckCircle2 className="w-4 h-4 text-[#6B0F1A] flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#650000] flex-shrink-0" />
                       <span>{benefit}</span>
                     </div>
                   ))}
@@ -293,7 +293,7 @@ export default function GymSpaceShowcase({
                 <button
                   type="button"
                   onClick={handleCtaPrimaryClick}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#F4E409] text-[#3D0710] border border-[#6B0F1A]/30 px-6 py-3 font-extrabold text-xs sm:text-sm shadow-xs hover:bg-[#3D0710] hover:text-[#F4E409] transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FAFA33] text-[#650000] border border-[#650000]/30 px-6 py-3 font-extrabold text-xs sm:text-sm shadow-xs hover:bg-[#650000] hover:text-[#FAFA33] transition-all cursor-pointer"
                 >
                   <Utensils className="w-4 h-4" />
                   <span>{activeCategory.primaryCta}</span>
@@ -303,9 +303,9 @@ export default function GymSpaceShowcase({
                 <button
                   type="button"
                   onClick={handleCtaSecondaryClick}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#6B0F1A] text-[#FFF6A3] border border-[#6B0F1A] px-6 py-3 font-extrabold text-xs sm:text-sm shadow-xs hover:bg-[#3D0710] hover:text-[#F4E409] transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#650000] text-[#FFFBCC] border border-[#650000] px-6 py-3 font-extrabold text-xs sm:text-sm shadow-xs hover:bg-[#650000] hover:text-[#FAFA33] transition-all cursor-pointer"
                 >
-                  <Store className="w-4 h-4 text-[#F4E409]" />
+                  <Store className="w-4 h-4 text-[#FAFA33]" />
                   <span>{activeCategory.secondaryCta}</span>
                 </button>
               </div>
@@ -314,7 +314,7 @@ export default function GymSpaceShowcase({
 
             {/* Right Column: Featured Category Image */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#6B0F1A]/20 bg-[#3D0710] shadow-[0_16px_40px_rgba(107,15,26,0.15)] aspect-4/5 w-full max-w-lg mx-auto group">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#650000]/20 bg-[#650000] shadow-[0_16px_40px_rgba(101,0,0,0.15)] aspect-4/5 w-full max-w-lg mx-auto group">
                 <Image
                   key={activeCategory.id}
                   src={activeCategory.image}
@@ -331,9 +331,9 @@ export default function GymSpaceShowcase({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 
                 {/* Floating Category Label */}
-                <div className="absolute bottom-4 left-4 right-4 bg-[#3D0710] text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl border-2 border-[#F4E409] shadow-xl flex items-center justify-between text-xs sm:text-sm lg:text-base font-bold tracking-wide z-10">
+                <div className="absolute bottom-4 left-4 right-4 bg-[#650000] text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl border-2 border-[#FAFA33] shadow-xl flex items-center justify-between text-xs sm:text-sm lg:text-base font-bold tracking-wide z-10">
                   <span className="whitespace-normal leading-tight">{activeCategory.title} Space</span>
-                  <ArrowRight className="w-5 h-5 text-[#F4E409] flex-shrink-0 ml-2" />
+                  <ArrowRight className="w-5 h-5 text-[#FAFA33] flex-shrink-0 ml-2" />
                 </div>
               </div>
             </div>
@@ -350,11 +350,11 @@ export default function GymSpaceShowcase({
                 key={idx}
                 className="flex items-center gap-3 p-3 rounded-2xl bg-[#FFFDF5] border border-[#F0E2E4] shadow-2xs"
               >
-                <div className="p-2 rounded-xl bg-[#FFF6A3] text-[#6B0F1A] flex-shrink-0">
+                <div className="p-2 rounded-xl bg-[#FFFBCC] text-[#650000] flex-shrink-0">
                   <IconComp className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-extrabold text-[#6B0F1A] leading-tight">
+                  <h4 className="text-xs font-extrabold text-[#650000] leading-tight">
                     {item.label}
                   </h4>
                   <p className="text-[10px] text-[#5F5F5F] font-bold mt-0.5">
