@@ -34,7 +34,7 @@ export const SAMPLE_OPPORTUNITIES: OpportunityExample[] = [
     arrangement: "Weekly / Monthly Space Rental",
     badgeText: "High Footfall",
     description: "Top impulse-buy location right at the billing counter capturing every shopper during checkout.",
-    bgGradient: "from-yellow-950/90 to-amber-950/90"
+    bgGradient: "from-[#650000] to-[#650000]"
   },
   {
     id: "glass-showcase-cabinet",
@@ -58,7 +58,7 @@ export const SAMPLE_OPPORTUNITIES: OpportunityExample[] = [
     arrangement: "Monthly Gift Store Sublet",
     badgeText: "Prime Spot",
     description: "Eye-catching illuminated wall display inside a bustling seaside gift store.",
-    bgGradient: "from-amber-900/90 to-stone-900/90"
+    bgGradient: "from-[#650000] to-[#650000]"
   },
   {
     id: "kids-creative-corner",
@@ -70,7 +70,7 @@ export const SAMPLE_OPPORTUNITIES: OpportunityExample[] = [
     arrangement: "Monthly Space Rental",
     badgeText: "Family Retail",
     description: "Premium retail display corner ideal for children's gifts and creative activity products.",
-    bgGradient: "from-rose-950/90 to-pink-950/90"
+    bgGradient: "from-[#650000] to-[#650000]"
   },
   {
     id: "entrance-display-stand",
@@ -82,7 +82,7 @@ export const SAMPLE_OPPORTUNITIES: OpportunityExample[] = [
     arrangement: "Flexible Monthly Rental",
     badgeText: "High Visibility",
     description: "High-impact entrance spot inside a busy gift lounge attracting store walk-ins.",
-    bgGradient: "from-purple-950/90 to-rose-950/90"
+    bgGradient: "from-[#650000] to-[#650000]"
   }
 ];
 

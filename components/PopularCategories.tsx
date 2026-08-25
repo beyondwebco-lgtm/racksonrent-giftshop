@@ -168,7 +168,7 @@ export default function PopularCategories() {
                     )}
 
                     {/* Image Container */}
-                    <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-[#F8F8FA] border border-[#F0E2E4] mb-4 flex items-center justify-center">
+                    <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-[#FFFDF5] border border-[#F0E2E4] mb-4 flex items-center justify-center">
                       <Image
                         src={cat.image}
                         alt={cat.alt}
