@@ -30,6 +30,7 @@ import {
   SHOWCASE_TRUST_ITEMS,
   ShowcaseCategory,
 } from "@/data/showcase";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 interface GymSpaceShowcaseProps {
   onSelectCategoryAction?: (
@@ -163,18 +164,16 @@ export default function GymSpaceShowcase({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-xs sm:text-sm font-bold text-[#650000] border border-[#F0E2E4]">
-            Gift Shop Display Opportunities
-          </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
-            <span className="hidden sm:inline">Choose What You Want to Display Inside a Gift Shop</span>
-            <span className="sm:hidden">Explore Gift Shop Display Formats</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#5F5F5F] md:text-lg font-medium">
-            Explore gift-shop shelves, checkout counters, tabletop displays, wall racks, showcase spaces, premium product corners, and other retail display opportunities inside active gift stores.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Gift Shop Display Opportunities"
+          title={
+            <>
+              <span className="hidden sm:inline">Choose What You Want to Display Inside a Gift Shop</span>
+              <span className="sm:hidden">Explore Gift Shop Display Formats</span>
+            </>
+          }
+          subtitle="Explore gift-shop shelves, checkout counters, tabletop displays, wall racks, showcase spaces, premium product corners, and other retail display opportunities inside active gift stores."
+        />
 
 
         {/* Category Tab Bar (Flex Wrap - Fully Visible Without Horizontal Scroll) */}

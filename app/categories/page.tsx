@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { ALL_18_CATEGORIES, CategoryItem } from "@/data/categories";
 import { SITE_CONFIG } from "@/data/config";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function CategoriesPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -64,17 +65,12 @@ export default function CategoriesPage() {
             </Link>
           </div>
 
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-xs sm:text-sm font-bold text-[#650000] border border-[#F0E2E4]">
-              Complete Gift Shop Product Catalog
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#650000] tracking-tight leading-tight">
-              All 18 Gift Shop Display Categories
-            </h1>
-            <p className="text-base sm:text-lg text-[#5F5F5F] font-medium leading-relaxed max-w-2xl mx-auto">
-              Discover all 18 product and display categories connecting gift shop owners with handmade creators, gift brands, stationery artists, home decor brands, and specialty entrepreneurs.
-            </p>
-          </div>
+          <SectionHeader
+            badge="Complete Gift Shop Product Catalog"
+            title="All 18 Gift Shop Display Categories"
+            subtitle="Discover all 18 product and display categories connecting gift shop owners with handmade creators, gift brands, stationery artists, home decor brands, and specialty entrepreneurs."
+            className="mb-8"
+          />
 
           {/* Search & Filter Controls */}
           <div className="mt-10 max-w-3xl mx-auto space-y-4">

@@ -10,6 +10,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { POPULAR_CATEGORIES, CategoryItem } from "@/data/categories";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function PopularCategories() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -80,17 +81,11 @@ export default function PopularCategories() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex rounded-full bg-[#FFFBCC] px-4 py-1.5 text-sm font-bold text-[#650000] border border-[#F0E2E4]">
-            Gift Shop Display Categories
-          </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
-            Popular Gift Product Categories
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#5F5F5F] md:text-lg font-medium">
-            Explore high-demand gifts, handmade products, stationery, home decor, accessories, lifestyle products, personalized items, and specialty products displayed inside gift shops across India.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Gift Shop Display Categories"
+          title="Popular Gift Product Categories"
+          subtitle="Explore high-demand gifts, handmade products, stationery, home decor, accessories, lifestyle products, personalized items, and specialty products displayed inside gift shops across India."
+        />
 
         {/* Center-Focused Carousel Container */}
         <div className="relative max-w-5xl mx-auto px-2 sm:px-12">

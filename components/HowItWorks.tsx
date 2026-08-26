@@ -1,5 +1,6 @@
 import React from "react";
 import { Store, Search, Calendar, ShoppingBag, TrendingUp, ArrowRight } from "lucide-react";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function HowItWorks() {
   const steps = [
@@ -40,17 +41,11 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex rounded-full bg-[#FFFDF5] px-4 py-1.5 text-sm font-bold text-[#650000] border border-[#F0E2E4]">
-            5-Step Process
-          </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#650000] md:text-5xl">
-            How It Works
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#5F5F5F] md:text-lg font-medium">
-            Five simple steps to connect gift shop owners with brands, creators, artists, and entrepreneurs looking for physical retail display space.
-          </p>
-        </div>
+        <SectionHeader
+          badge="5-Step Process"
+          title="How It Works"
+          subtitle="Five simple steps to connect gift shop owners with brands, creators, artists, and entrepreneurs looking for physical retail display space."
+        />
 
         {/* 5 Step Cards with Desktop Arrows and Mobile Flow Lines */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-5 relative">
