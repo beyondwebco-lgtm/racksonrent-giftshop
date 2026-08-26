@@ -168,8 +168,18 @@ export default function GymSpaceShowcase({
           badge="Gift Shop Display Opportunities"
           title={
             <>
-              <span className="hidden sm:inline">Choose What You Want to Display Inside a Gift Shop</span>
-              <span className="sm:hidden">Explore Gift Shop Display Formats</span>
+              <span className="hidden sm:inline">
+                Choose What You Want to Display{" "}
+                <span className="text-[#FAFA33] font-black drop-shadow-[0_1.5px_1.5px_rgba(101,0,0,0.4)]">
+                  Inside a Gift Shop
+                </span>
+              </span>
+              <span className="sm:hidden">
+                Explore{" "}
+                <span className="text-[#FAFA33] font-black drop-shadow-[0_1.5px_1.5px_rgba(101,0,0,0.4)]">
+                  Gift Shop Display Formats
+                </span>
+              </span>
             </>
           }
           subtitle="Explore gift-shop shelves, checkout counters, tabletop displays, wall racks, showcase spaces, premium product corners, and other retail display opportunities inside active gift stores."
@@ -245,25 +255,27 @@ export default function GymSpaceShowcase({
                 <span className="inline-flex rounded-full bg-[#FFFBCC] px-3.5 py-1 text-xs font-black text-[#650000] border border-[#650000]/20">
                   {activeCategory.eyebrow}
                 </span>
-                <h3 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#650000] leading-snug">
+                <h3 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#6B0F1A] leading-snug">
                   {activeCategory.title}
                 </h3>
-                <p className="mt-3 text-sm sm:text-base text-[#5F5F5F] leading-relaxed font-medium">
+                <p className="mt-3 text-sm text-[#650000]/85 font-medium leading-relaxed">
                   {activeCategory.description}
                 </p>
               </div>
 
-              {/* Suitable Products / Services */}
+              {/* Suitable For (Lemon Yellow #FAFA33 Tags) */}
               <div>
-                <span className="block text-xs font-extrabold text-[#650000] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <Tag className="w-3.5 h-3.5" />
-                  <span>Suitable For</span>
+                <span className="block text-xs font-black uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <Tag className="w-3.5 h-3.5 text-[#650000]" />
+                  <span className="bg-[#650000] text-[#FAFA33] px-2.5 py-0.5 rounded-md font-extrabold">
+                    Suitable For
+                  </span>
                 </span>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {activeCategory.suitableFor.map((item, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 rounded-lg bg-[#FFFBCC]/60 text-[#650000] text-xs font-bold border border-[#650000]/10"
+                      className="px-2.5 py-1 rounded-lg bg-[#FAFA33] text-[#4A0000] text-xs font-extrabold border border-[#650000]/20 shadow-2xs"
                     >
                       {item}
                     </span>
@@ -271,15 +283,20 @@ export default function GymSpaceShowcase({
                 </div>
               </div>
 
-              {/* Key Benefits */}
+              {/* Key Benefits (Lemon Yellow #FAFA33 Cards) */}
               <div>
-                <span className="block text-xs font-extrabold text-[#650000] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Key Benefits</span>
+                <span className="block text-xs font-black uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#650000]" />
+                  <span className="bg-[#650000] text-[#FAFA33] px-2.5 py-0.5 rounded-md font-extrabold">
+                    Key Benefits
+                  </span>
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {activeCategory.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-[#1F1F1F] font-extrabold">
+                    <div 
+                      key={idx} 
+                      className="flex items-center gap-2 text-xs sm:text-sm text-[#4A0000] font-extrabold bg-[#FAFA33]/80 p-2 rounded-xl border border-[#650000]/15 shadow-2xs"
+                    >
                       <CheckCircle2 className="w-4 h-4 text-[#650000] flex-shrink-0" />
                       <span>{benefit}</span>
                     </div>

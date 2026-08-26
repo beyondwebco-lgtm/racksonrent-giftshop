@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #650000;
   --color-primary-maroon: #650000;
-  --color-dark-maroon: #650000;
+  --color-dark-maroon: #4A0000;
   --color-secondary: #FAFA33;
   --color-lemon-yellow: #FAFA33;
   --color-accent: #FFFBCC;
@@ -24,7 +24,7 @@
   --background-maroon: #650000;
 
   --primary: #650000;
-  --primary-dark: #650000;
+  --primary-dark: #4A0000;
   --secondary: #fafa33;
   --accent: #fffbcc;
   --accent-light: #fffbcc;
