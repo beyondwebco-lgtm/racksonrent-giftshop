@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Racks on Rent", url: SITE_CONFIG.domain }],
   creator: "Racks on Rent",
   publisher: "Racks on Rent",
+  icons: {
+    icon: "/opengraph-favicon.jpeg",
+    shortcut: "/favicon.ico",
+    apple: "/opengraph-favicon.jpeg",
+  },
   openGraph: {
     title: "Gift Shop Display Space for Rent in India | Racks on Rent",
     description:
@@ -43,6 +48,21 @@ export const metadata: Metadata = {
     siteName: "Racks on Rent",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-favicon.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Racks on Rent - Gift Shop Display Space for Rent",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gift Shop Display Space for Rent in India | Racks on Rent",
+    description:
+      "Find or list unused shelves, counters, display racks, and retail spaces inside gift shops across India.",
+    images: ["/opengraph-favicon.jpeg"],
   },
   robots: {
     index: true,

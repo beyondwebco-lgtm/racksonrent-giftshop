@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#FFFDF5"/>
+  <rect x="30" y="30" width="1140" height="840" rx="24" fill="#FFFFFF" stroke="#F0E2E4" stroke-width="4"/>
+  <rect x="80" y="70" width="1040" height="100" rx="16" fill="#650000"/>
+  <text x="600" y="130" fill="#FFFBCC" font-family="sans-serif" font-size="32" font-weight="900" text-anchor="middle">Brands &amp; Startups Step-By-Step Journey</text>
+  
+  <g transform="translate(100, 220)">
+    <rect width="460" height="240" rx="16" fill="#FFFDF5" stroke="#F0E2E4" stroke-width="2"/>
+    <circle cx="60" cy="60" r="30" fill="#650000"/>
+    <text x="60" y="68" fill="#FAFA33" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">1</text>
+    <text x="110" y="65" fill="#650000" font-family="sans-serif" font-size="22" font-weight="800">Browse High-Footfall Venues</text>
+    <text x="30" y="120" fill="#5F5F5F" font-family="sans-serif" font-size="16" font-weight="500">Filter premium retail locations by target demographic.</text>
+  </g>
+
+  <g transform="translate(640, 220)">
+    <rect width="460" height="240" rx="16" fill="#FFFDF5" stroke="#F0E2E4" stroke-width="2"/>
+    <circle cx="60" cy="60" r="30" fill="#650000"/>
+    <text x="60" y="68" fill="#FAFA33" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">2</text>
+    <text x="110" y="65" fill="#650000" font-family="sans-serif" font-size="22" font-weight="800">Reserve Shelf or Rack Space</text>
+    <text x="30" y="120" fill="#5F5F5F" font-family="sans-serif" font-size="16" font-weight="500">Choose flexible rental duration without long leases.</text>
+  </g>
+
+  <g transform="translate(100, 500)">
+    <rect width="460" height="240" rx="16" fill="#FFFDF5" stroke="#F0E2E4" stroke-width="2"/>
+    <circle cx="60" cy="60" r="30" fill="#650000"/>
+    <text x="60" y="68" fill="#FAFA33" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">3</text>
+    <text x="110" y="65" fill="#650000" font-family="sans-serif" font-size="22" font-weight="800">Deploy Display &amp; Stock</text>
+    <text x="30" y="120" fill="#5F5F5F" font-family="sans-serif" font-size="16" font-weight="500">Place products in high-visibility customer eye-lines.</text>
+  </g>
+
+  <g transform="translate(640, 500)">
+    <rect width="460" height="240" rx="16" fill="#FFFDF5" stroke="#F0E2E4" stroke-width="2"/>
+    <circle cx="60" cy="60" r="30" fill="#650000"/>
+    <text x="60" y="68" fill="#FAFA33" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">4</text>
+    <text x="110" y="65" fill="#650000" font-family="sans-serif" font-size="22" font-weight="800">Boost Offline Sales &amp; Awareness</text>
+    <text x="30" y="120" fill="#5F5F5F" font-family="sans-serif" font-size="16" font-weight="500">Acquire customers at a fraction of traditional store cost.</text>
+  </g>
+</svg>
