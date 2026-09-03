@@ -102,7 +102,7 @@ export default function Header({ onSelectRole }: HeaderProps) {
           {/* Icon Box: Rounded-xl square (40px mobile / 52px desktop) with #650000/20 border & scale-105 hover */}
           <div className="relative w-[40px] h-[40px] lg:w-[52px] lg:h-[52px] rounded-xl overflow-hidden flex-shrink-0 bg-white p-0.5 border border-[#650000]/20 shadow-2xs group-hover:scale-105 transition-transform duration-200">
             <Image
-              src="/images/logo.webp"
+              src="/images/navbar-logo.jpeg"
               alt="Racks on Rent Logo Icon"
               fill
               sizes="(max-width: 1023px) 40px, 52px"
@@ -199,7 +199,7 @@ export default function Header({ onSelectRole }: HeaderProps) {
             >
               <div className="relative w-[40px] h-[40px] rounded-xl overflow-hidden flex-shrink-0 bg-white p-0.5 border border-[#650000]/20 shadow-2xs">
                 <Image
-                  src="/images/logo.webp"
+                  src="/images/navbar-logo.jpeg"
                   alt="Racks on Rent Logo Icon"
                   fill
                   sizes="40px"
