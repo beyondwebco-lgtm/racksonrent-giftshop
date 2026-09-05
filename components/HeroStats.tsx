@@ -3,50 +3,28 @@
 import React from "react";
 import { Layers, Store, TrendingUp } from "lucide-react";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import { HERO_STATS } from "@/data/stats";
 
 export default function HeroStats() {
-  const statsList = [
-    {
-      id: "spaces",
-      targetNumber: 500,
-      prefix: "",
-      suffix: "+",
-      label: "Gift Shop Spaces Listed",
-      icon: <Layers className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
-    },
-    {
-      id: "brands",
-      targetNumber: 1000,
-      prefix: "",
-      suffix: "+",
-      label: "Gift Brands Connected",
-      icon: <Store className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
-    },
-    {
-      id: "earnings",
-      targetNumber: 5,
-      prefix: "₹ ",
-      suffix: " Lakhs+",
-      label: "Extra Income Generated",
-      icon: <TrendingUp className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
-    },
-  ];
+  const iconMap: Record<string, React.ReactNode> = {
+    spaces: <Layers className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
+    brands: <Store className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
+    earnings: <TrendingUp className="w-6 h-6 text-[#FAFA33] group-hover:scale-110 transition-transform duration-300" />,
+  };
 
   return (
-    <div className="bg-[#650000] text-white py-5 sm:py-6 border-y border-black/20 shadow-md">
+    <div className="bg-[#740202] text-white py-6 border-y border-[#500101] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/15">
-          {statsList.map((stat, idx) => (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-[#500101]/60">
+          {HERO_STATS.map((stat) => (
             <div
               key={stat.id}
-              className={`flex flex-col items-center justify-center space-y-1 p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-black/20 group cursor-default ${
-                idx > 0 ? "pt-4 sm:pt-3" : ""
-              }`}
+              className="pt-4 sm:pt-0 flex flex-col items-center justify-center space-y-1 p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#500101]/40 group cursor-default"
             >
-              <div className="p-2 sm:p-2.5 rounded-2xl bg-black/25 mb-0.5 sm:mb-1 group-hover:bg-black/40 transition-colors">
-                {stat.icon}
+              <div className="p-2.5 rounded-2xl bg-[#500101]/50 mb-1 group-hover:bg-[#500101] transition-colors">
+                {iconMap[stat.id] || <Layers className="w-6 h-6 text-[#FAFA33]" />}
               </div>
-              <span className="text-2xl min-[360px]:text-3xl sm:text-4xl font-black text-[#FAFA33] tracking-tight">
+              <span className="text-3xl sm:text-4xl font-black text-[#FAFA33] tracking-tight">
                 <AnimatedCounter
                   targetNumber={stat.targetNumber}
                   prefix={stat.prefix}
@@ -54,7 +32,7 @@ export default function HeroStats() {
                   durationMs={1200}
                 />
               </span>
-              <span className="text-[11px] sm:text-xs md:text-sm font-bold text-white/90 uppercase tracking-wider">
+              <span className="text-xs sm:text-sm font-bold text-white/90 uppercase tracking-wider">
                 {stat.label}
               </span>
             </div>
@@ -64,4 +42,3 @@ export default function HeroStats() {
     </div>
   );
 }
-

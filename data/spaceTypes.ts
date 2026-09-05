@@ -7,49 +7,53 @@ export interface SpaceTypeItem {
 
 export const COMPACT_SPACE_TYPES: SpaceTypeItem[] = [
   {
-    id: "gift-counter",
+    id: "counter-display",
     name: "Gift Shop Counter Display",
-    description: "Checkout counter display spot capturing every gift shop customer during purchase.",
+    description: "Dedicated counter display space inside gift shops for gifts, impulse buys, and specialty items.",
     iconName: "Store",
   },
   {
     id: "eye-level-shelf",
     name: "Eye-Level Gift Shelf",
-    description: "Dedicated eye-level wooden or glass shelf for handmade gifts, decor, and accessories.",
+    description: "Prime eye-level wooden or glass shelf space for handmade gifts, decor, stationery, and packaged products.",
     iconName: "Layers",
   },
   {
     id: "checkout-counter",
     name: "Checkout Counter Space",
-    description: "High-visibility point-of-sale display right beside the billing counter.",
+    description: "High-visibility point-of-sale display right beside the billing counter for impulse gift products.",
     iconName: "Store",
   },
   {
-    id: "showcase-cabinet",
+    id: "glass-showcase",
     name: "Glass Showcase Cabinet",
-    description: "Protected showcase glass cabinet for jewelry, keepsakes, and premium artisan items.",
-    iconName: "ShieldCheck",
+    description: "Secure, well-lit glass cabinet display for premium gifts, jewellery, crafts, and luxury keepsakes.",
+    iconName: "Sparkles",
   },
   {
     id: "tabletop-display",
     name: "Tabletop Display",
-    description: "Promotional tabletop stand placed in high-footfall store areas for maximum engagement.",
+    description: "Center table or promotional tabletop stand for curated gift collections, hampers, and creative products.",
     iconName: "Gift",
   },
   {
-    id: "entrance-stand",
+    id: "entrance-window",
     name: "Entrance & Window Display",
-    description: "Front store window or entrance display rack attracting browsing shoppers.",
-    iconName: "Box",
+    description: "Front store window showcase area attracting footfall directly from pedestrians and shoppers.",
+    iconName: "Eye",
+  },
+  {
+    id: "custom-space",
+    name: "Custom Space",
+    description: "Full gift store corner or bespoke display arrangement for growing gift brands.",
+    iconName: "Target",
   },
 ];
 
 export const RACK_SIZES = [
-  { id: "small", name: "Small Display", dimensions: "Up to 2x1 ft" },
-  { id: "medium", name: "Medium Display", dimensions: "Up to 3x2 ft" },
-  { id: "large", name: "Large Display", dimensions: "Up to 5x2 ft" },
-  { id: "countertop", name: "Countertop Space", dimensions: "Billing Counter Area" },
-  { id: "custom", name: "Custom Space", dimensions: "Full Gift Store Corner" },
+  { id: "small", name: "Small Display (Up to 2x1 ft)", dimensions: "Up to 2x1 ft" },
+  { id: "medium", name: "Medium Display (Up to 3x2 ft)", dimensions: "Up to 3x2 ft" },
+  { id: "large", name: "Large Display (Up to 5x2 ft)", dimensions: "Up to 5x2 ft" },
+  { id: "countertop", name: "Countertop Space (Billing Counter Area)", dimensions: "Billing Counter Area" },
+  { id: "custom", name: "Custom Space (Full Gift Store Corner)", dimensions: "Full Gift Store Corner" },
 ];
-
-

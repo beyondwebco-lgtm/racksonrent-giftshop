@@ -30,12 +30,12 @@ export const ROLE_CARDS = [
     id: "gym-owner",
     role: "gym-owner" as const,
     heading: "I Own a Gift Shop",
-    text: "You have unused shelves, counters, display corners, glass showcases, or retail areas inside your gift shop.",
+    text: "You have unused shelves, counters, glass showcases, tabletop displays, or corner areas inside your gift store.",
     benefits: [
-      "Monetize empty shelves, counters, or display corners.",
-      "Offer customers complementary unique products.",
-      "Attract new footfall from featured brand fans.",
-      "Earn steady, hassle-free extra monthly income."
+      "Monetize unused shelves, showcases, or display corners.",
+      "Offer customers exciting, unique handmade gifts and lifestyle products.",
+      "Attract new footfall from partner gift brands and creators.",
+      "Earn steady, hassle-free extra monthly rental income."
     ],
     ctaLabel: "List Your Gift Shop Space",
   },
@@ -43,12 +43,12 @@ export const ROLE_CARDS = [
     id: "wellness",
     role: "wellness" as const,
     heading: "I Am a Gift Brand / Entrepreneur",
-    text: "You produce handmade gifts, crafts, stationery, home decor, or accessories and need a high-visibility gift shop spot to sell.",
+    text: "You create or sell gifts, handmade crafts, stationery, lifestyle products, or accessories and need high-visibility retail display space.",
     benefits: [
-      "Place your products inside trusted local gift shops.",
-      "Reach active, ready-to-buy gift shoppers instantly.",
-      "Avoid expensive standalone retail lease costs.",
-      "Build brand visibility in prime city locations."
+      "Place your gift products inside trusted, busy gift stores.",
+      "Reach active, ready-to-buy shoppers instantly.",
+      "Avoid expensive standalone store lease and setup costs.",
+      "Build brand discovery in prime gift retail locations."
     ],
     ctaLabel: "Find Gift Shop Space",
   },
@@ -56,23 +56,21 @@ export const ROLE_CARDS = [
 
 export const BENEFITS_COMPARISON = {
   gymOwners: {
-    title: "Gift Shop Owners",
+    title: "Gift Shop Owners & Retail Partners",
     points: [
-      "Earn rental income from unused display space",
-      "Offer customers wider gift & lifestyle variety",
-      "Attract new footfall to your gift store location",
-      "Build valuable brand & creator partnerships",
+      "Earn rental income from underutilized display shelves and counters",
+      "Offer shoppers a wider variety of unique handmade and lifestyle gifts",
+      "Attract fresh shopper footfall from brand collaborations",
+      "Build valuable partnerships with emerging creators and brands",
     ],
   },
   wellnessBusinesses: {
-    title: "Gift Brands & Entrepreneurs",
+    title: "Gift Brands & Creative Entrepreneurs",
     points: [
-      "Access high daily gift-shop customer footfall",
-      "Start physical retail with minimal investment",
-      "Test new gift products and custom creations",
-      "Scale into multiple local gift shops easily",
+      "Access active daily gift shop customer footfall",
+      "Start physical retail presence with minimal investment",
+      "Test new gift collections and product lines in real stores",
+      "Scale across multiple gift store locations effortlessly",
     ],
   },
 };
-
-

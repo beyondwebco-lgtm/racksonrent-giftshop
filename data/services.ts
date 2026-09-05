@@ -3,73 +3,71 @@ export interface ServiceSupported {
   title: string;
   description: string;
   iconName: string;
-  category: "packaged" | "beverages" | "healthy" | "display";
+  category: "handmade" | "stationery" | "decor" | "display";
 }
 
 export const SERVICES_SUPPORTED: ServiceSupported[] = [
   {
     id: "handmade-crafts",
-    title: "Handmade Gifts & Crafts",
-    description: "Handmade crafts, artisan gifts, candles, pottery, and artistic creations.",
+    title: "Handmade Gifts & Artisan Crafts",
+    description: "Artisan crafts, scented candles, pottery, and unique handcrafted decor.",
     iconName: "Gift",
-    category: "packaged"
+    category: "handmade"
   },
   {
     id: "personalized-gifts",
-    title: "Personalized Gifts & Custom Products",
-    description: "Engraved gifts, photo keepsakes, custom mugs, and bespoke accessories.",
+    title: "Personalized & Custom Products",
+    description: "Custom mugs, engraved keepsakes, bespoke hampers, and personalized items.",
     iconName: "Sparkles",
-    category: "packaged"
+    category: "handmade"
   },
   {
     id: "stationery-journaling",
     title: "Stationery & Journaling",
-    description: "Artisan notebooks, planner sets, greeting cards, and calligraphy tools.",
+    description: "Aesthetic notebooks, journals, calligraphy pens, washi tapes, and cards.",
     iconName: "ShoppingBag",
-    category: "beverages"
+    category: "stationery"
   },
   {
     id: "home-decor",
     title: "Home Decor & Lifestyle Gifts",
-    description: "Scented candles, wall art, ceramic vases, and aesthetic home accents.",
-    iconName: "HeartHandshake",
-    category: "healthy"
+    description: "Aroma diffusers, soy candles, ceramic vases, and artistic wall decor.",
+    iconName: "Layers",
+    category: "decor"
   },
   {
-    id: "jewelry-accessories",
-    title: "Jewellery & Fashion Accessories",
-    description: "Handmade jewelry, tote bags, scarves, and fashion accessories.",
-    iconName: "Gift",
-    category: "packaged"
-  },
-  {
-    id: "kids-creative",
-    title: "Kids Gifts & Creative Toys",
-    description: "Wooden toys, craft activity kits, storybooks, and puzzle sets.",
+    id: "jewellery-accessories",
+    title: "Jewellery & Fashion Gifts",
+    description: "Handcrafted earrings, scrunchies, silk scarves, keychains, and accessories.",
     iconName: "Sparkles",
-    category: "display"
+    category: "handmade"
   },
   {
-    id: "gift-counters",
+    id: "kids-gifts",
+    title: "Kids Gifts & Creative Toys",
+    description: "Wooden educational toys, DIY craft kits, board games, and plush toys.",
+    iconName: "HeartHandshake",
+    category: "handmade"
+  },
+  {
+    id: "counter-displays",
     title: "Gift Shop Counter Displays",
-    description: "Checkout counter display spots placed next to the billing register.",
+    description: "Point-of-sale displays and checkout counter space for impulse gift buys.",
     iconName: "Store",
     category: "display"
   },
   {
-    id: "eye-level-shelves",
-    title: "Eye-Level Gift Shelves",
-    description: "Dedicated wooden and glass shelves positioned at eye level for high visibility.",
+    id: "showcase-cabinets",
+    title: "Glass Showcase Cabinets",
+    description: "Secure, illuminated glass cabinet display for premium gifts and jewellery.",
     iconName: "Layers",
     category: "display"
   },
   {
-    id: "glass-showcases",
-    title: "Glass Showcase Cabinets",
-    description: "Protected glass display cabinets for jewelry, keepsakes, and premium items.",
-    iconName: "ShieldCheck",
+    id: "window-showcases",
+    title: "Entrance & Window Showcases",
+    description: "Street-facing front window display areas attracting walking shoppers.",
+    iconName: "Maximize",
     category: "display"
   }
 ];
-
-

@@ -17,52 +17,53 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
   title: "Gift Shop Display Space for Rent in India | Racks on Rent",
   description:
-    "Find or list unused shelves, counters, display racks, and retail spaces inside gift shops across India. Racks on Rent connects gift shop owners with gift brands, artists, and entrepreneurs.",
+    "Find or list unused gift shop shelves, checkout counters, glass showcases, and tabletop display spaces inside gift stores across India. Racks on Rent connects gift shop owners with gift brands, creators & entrepreneurs.",
   keywords: [
     "Racks on Rent",
     "Gift shop display space for rent",
-    "Gift shop shelf space for rent",
-    "Gift store counter rental",
-    "Rent space inside gift shop",
-    "Product display in gift shops",
-    "Retail shelf rental India",
-    "Gift brand offline selling",
-    "Gift shop space marketplace",
-    "Gift shop owners extra income",
-    "Rent product shelf Hyderabad",
-    "Display products in gift stores"
+    "Gift store shelf rental",
+    "Rent counter space in gift shop",
+    "Gift display space",
+    "Handmade gift space rental",
+    "Stationery display space",
+    "Showcase rental gift store",
+    "Gift entrepreneurs India",
+    "Gift shop space sharing",
+    "Retail space for gift brands",
+    "Rent shelf space Hyderabad"
   ],
   authors: [{ name: "Racks on Rent", url: SITE_CONFIG.domain }],
   creator: "Racks on Rent",
   publisher: "Racks on Rent",
   icons: {
-    icon: "/opengraph-favicon.jpeg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/opengraph-favicon.jpeg",
   },
   openGraph: {
     title: "Gift Shop Display Space for Rent in India | Racks on Rent",
     description:
-      "Find or list unused shelves, counters, display racks, and retail spaces inside gift shops across India. Racks on Rent connects gift shop owners with gift brands, artists, and entrepreneurs.",
+      "Find or list unused gift shop shelves, checkout counters, glass showcases, and tabletop display spaces inside gift stores across India. Racks on Rent connects gift shop owners with gift brands, creators & entrepreneurs.",
     url: SITE_CONFIG.domain,
     siteName: "Racks on Rent",
-    locale: "en_IN",
-    type: "website",
     images: [
       {
-        url: "/opengraph-favicon.jpeg",
-        width: 1200,
-        height: 630,
+        url: "/opengraph-image.jpeg",
+        width: 1254,
+        height: 1254,
         alt: "Racks on Rent - Gift Shop Display Space for Rent",
       },
     ],
+    locale: "en_IN",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Gift Shop Display Space for Rent in India | Racks on Rent",
     description:
-      "Find or list unused shelves, counters, display racks, and retail spaces inside gift shops across India.",
-    images: ["/opengraph-favicon.jpeg"],
+      "Find or list unused gift shop shelves, checkout counters, glass showcases, and tabletop display spaces inside gift stores across India. Racks on Rent connects gift shop owners with gift brands, creators & entrepreneurs.",
+    images: ["/opengraph-image.jpeg"],
   },
   robots: {
     index: true,
@@ -88,7 +89,7 @@ export default function RootLayout({
     "name": "Racks on Rent",
     "url": SITE_CONFIG.domain,
     "logo": `${SITE_CONFIG.domain}/images/logo.png`,
-    "description": "Share Space. Grow Together. Connecting gift shop owners with gift brands, artists, and entrepreneurs.",
+    "description": "Sublet Space. Share Success. Connecting gift shop owners with gift brands, creators & entrepreneurs.",
     "telephone": "+917995424477",
     "email": "racksonrent@gmail.com"
   };
@@ -114,4 +115,3 @@ export default function RootLayout({
     </html>
   );
 }
-

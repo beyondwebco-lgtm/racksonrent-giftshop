@@ -3,12 +3,10 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import {
-  Stethoscope,
+  Gift,
   ShoppingBag,
   Sparkles,
-  Apple,
   HeartHandshake,
-  Zap,
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
@@ -19,18 +17,15 @@ import {
   Headphones,
   MapPin,
   ArrowRight,
-  Cake,
-  Cookie,
-  Utensils,
   Store,
 } from "lucide-react";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 import {
   SHOWCASE_CATEGORIES,
   SHOWCASE_TRUST_ITEMS,
   ShowcaseCategory,
 } from "@/data/showcase";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 
 interface GymSpaceShowcaseProps {
   onSelectCategoryAction?: (
@@ -49,22 +44,17 @@ export default function GymSpaceShowcase({
   const showcaseRef = useRef<HTMLDivElement>(null);
 
   const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-    Stethoscope,
+    Gift,
     ShoppingBag,
     Sparkles,
-    Apple,
     HeartHandshake,
-    Zap,
     ShieldCheck,
     Users,
     Layers,
     Headphones,
     MapPin,
-    Cake,
-    Cookie,
-    Utensils,
+    Store,
   };
-
 
   const activeCategory: ShowcaseCategory = SHOWCASE_CATEGORIES[activeIndex];
 
@@ -163,32 +153,31 @@ export default function GymSpaceShowcase({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
         <SectionHeader
-          badge="Gift Shop Display Opportunities"
+          badge="GIFT SHOP DISPLAY OPPORTUNITIES"
           title={
             <>
               <span className="hidden sm:inline">
-                Choose What You Want to Display{" "}
-                <span className="text-[#FAFA33] font-black drop-shadow-[0_1.5px_1.5px_rgba(101,0,0,0.4)]">
-                  Inside a Gift Shop
-                </span>
+                Choose What You Want to <span className="text-[#B8913A]">Display</span> Inside a Gift Shop
               </span>
               <span className="sm:hidden">
-                Explore{" "}
-                <span className="text-[#FAFA33] font-black drop-shadow-[0_1.5px_1.5px_rgba(101,0,0,0.4)]">
-                  Gift Shop Display Formats
-                </span>
+                Explore Gift Shop <span className="text-[#B8913A]">Display</span> Formats
               </span>
             </>
           }
-          subtitle="Explore gift-shop shelves, checkout counters, tabletop displays, wall racks, showcase spaces, premium product corners, and other retail display opportunities inside active gift stores."
+          subtitle={
+            <span
+              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-lg sm:text-[22px] font-medium not-italic text-[#1F1F1F] leading-relaxed block"
+            >
+              Explore gift-shop shelves, checkout counters, tabletop displays, wall racks, showcase spaces, premium product corners, and other retail display opportunities inside active gift stores.
+            </span>
+          }
         />
 
-
-        {/* Category Tab Bar (Flex Wrap - Fully Visible Without Horizontal Scroll) */}
-        <div className="mb-8 sm:mb-10 flex items-center justify-center">
-          <div className="flex flex-wrap gap-1.5 sm:gap-3 justify-center max-w-5xl mx-auto px-1">
+        {/* Category Tab Bar */}
+        <div className="mb-10 flex items-center justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center max-w-5xl mx-auto px-2">
             {SHOWCASE_CATEGORIES.map((cat, idx) => {
               const IconComp = iconMap[cat.iconName] || Layers;
               const isActive = idx === activeIndex;
@@ -202,14 +191,21 @@ export default function GymSpaceShowcase({
                     setActiveIndex(idx);
                     setTimeout(() => setIsAnimating(false), 450);
                   }}
-                  className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-extrabold border transition-all cursor-pointer ${
+                  className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full border transition-all cursor-pointer min-h-[44px] ${
                     isActive
-                      ? "bg-[#650000] text-[#FFFBCC] border-[#FAFA33] shadow-md scale-[1.02] sm:scale-105"
-                      : "bg-[#FFFDF5] text-[#650000] border-[#F0E2E4] hover:bg-[#FFFBCC]/60"
+                      ? "bg-[#740202] text-[#FAFA33] border-[#FAFA33] shadow-md scale-105"
+                      : "bg-[#FFFDF5] text-[#740202] border-[#F0E2E4] hover:bg-[#FFFBCC]/40"
                   }`}
                 >
-                  <IconComp className={`w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 ${isActive ? "text-[#FAFA33]" : "text-[#650000]"}`} />
-                  <span className="whitespace-normal text-left">{cat.shortName}</span>
+                  <IconComp className={`w-4 h-4 flex-shrink-0 ${isActive ? "text-[#FAFA33]" : "text-[#740202]"}`} />
+                  <span
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className={`whitespace-normal text-left text-base sm:text-lg font-semibold italic leading-relaxed ${
+                      isActive ? "text-[#FAFA33]" : "text-[#740202]"
+                    }`}
+                  >
+                    {cat.shortName}
+                  </span>
                 </button>
               );
             })}
@@ -221,26 +217,26 @@ export default function GymSpaceShowcase({
           ref={showcaseRef}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative bg-[#FFFDF5] rounded-2xl sm:rounded-3xl border-2 border-[#650000] p-4 sm:p-10 px-4 min-[400px]:px-8 sm:px-14 lg:px-16 shadow-[0_24px_70px_rgba(101,0,0,0.12)] overflow-hidden"
+          className="relative bg-[#FFFDF5] rounded-3xl border-2 border-[#740202] p-6 sm:p-10 px-8 sm:px-14 lg:px-16 shadow-[0_24px_70px_rgba(116,2,2,0.12)] overflow-hidden"
         >
-          {/* Left Arrow Button */}
+          {/* Left Arrow Button on Left Side of Box */}
           <button
             type="button"
             onClick={handlePrev}
             aria-label="Previous space category"
-            className="absolute left-1.5 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#650000] text-[#FFFBCC] border-2 border-[#FAFA33] flex items-center justify-center shadow-lg hover:bg-[#650000] hover:text-[#FAFA33] hover:scale-105 transition-all cursor-pointer active:scale-95"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#740202] text-[#FAFA33] border-2 border-[#FAFA33] flex items-center justify-center shadow-lg hover:bg-[#500101] hover:text-[#FAFA33] hover:scale-105 transition-all cursor-pointer active:scale-95 min-w-[44px] min-h-[44px]"
           >
-            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 stroke-[3]" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
 
-          {/* Right Arrow Button */}
+          {/* Right Arrow Button on Right Side of Box */}
           <button
             type="button"
             onClick={handleNext}
             aria-label="Next space category"
-            className="absolute right-1.5 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#650000] text-[#FFFBCC] border-2 border-[#FAFA33] flex items-center justify-center shadow-lg hover:bg-[#650000] hover:text-[#FAFA33] hover:scale-105 transition-all cursor-pointer active:scale-95"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#740202] text-[#FAFA33] border-2 border-[#FAFA33] flex items-center justify-center shadow-lg hover:bg-[#500101] hover:text-[#FAFA33] hover:scale-105 transition-all cursor-pointer active:scale-95"
           >
-            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 stroke-[3]" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -252,30 +248,34 @@ export default function GymSpaceShowcase({
               }`}
             >
               <div>
-                <span className="inline-flex rounded-full bg-[#FFFBCC] px-3.5 py-1 text-xs font-black text-[#650000] border border-[#650000]/20">
+                <span className="inline-flex rounded-full bg-[#FAFA33] px-3.5 py-1 text-xs font-black text-[#740202] border border-[#740202]/20">
                   {activeCategory.eyebrow}
                 </span>
-                <h3 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#6B0F1A] leading-snug">
+                <h3
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold italic text-[#740202] leading-snug"
+                >
                   {activeCategory.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#650000]/85 font-medium leading-relaxed">
+                <p
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="mt-3 text-base sm:text-lg text-[#1F1F1F] leading-relaxed font-medium"
+                >
                   {activeCategory.description}
                 </p>
               </div>
 
-              {/* Suitable For (Lemon Yellow #FAFA33 Tags) */}
-              <div>
-                <span className="block text-xs font-black uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <Tag className="w-3.5 h-3.5 text-[#650000]" />
-                  <span className="bg-[#650000] text-[#FAFA33] px-2.5 py-0.5 rounded-md font-extrabold">
-                    Suitable For
-                  </span>
+              {/* Suitable Products / Services */}
+              <div className="pt-1">
+                <span className="block text-xs font-extrabold italic text-[#B8913A] uppercase tracking-[0.05em] mb-2.5 flex items-center gap-1.5">
+                  <Tag className="w-3.5 h-3.5 text-[#B8913A]" />
+                  <span>Suitable For</span>
                 </span>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                <div className="flex flex-wrap gap-2 sm:gap-2.5">
                   {activeCategory.suitableFor.map((item, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-1 rounded-lg bg-[#FAFA33] text-[#4A0000] text-xs font-extrabold border border-[#650000]/20 shadow-2xs"
+                      className="px-3 py-1.5 rounded-[8px] bg-[rgba(255,251,204,0.60)] text-[#740202] text-xs sm:text-sm font-bold border border-[rgba(116,2,2,0.10)]"
                     >
                       {item}
                     </span>
@@ -283,21 +283,19 @@ export default function GymSpaceShowcase({
                 </div>
               </div>
 
-              {/* Key Benefits (Lemon Yellow #FAFA33 Cards) */}
-              <div>
-                <span className="block text-xs font-black uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#650000]" />
-                  <span className="bg-[#650000] text-[#FAFA33] px-2.5 py-0.5 rounded-md font-extrabold">
-                    Key Benefits
-                  </span>
+              {/* Key Benefits */}
+              <div className="pt-1">
+                <span className="block text-xs font-extrabold italic text-[#740202] uppercase tracking-[0.05em] mb-2.5 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#740202]" />
+                  <span>Key Benefits</span>
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                   {activeCategory.benefits.map((benefit, idx) => (
-                    <div 
-                      key={idx} 
-                      className="flex items-center gap-2 text-xs sm:text-sm text-[#4A0000] font-extrabold bg-[#FAFA33]/80 p-2 rounded-xl border border-[#650000]/15 shadow-2xs"
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 text-[#B8913A] text-xs sm:text-sm font-bold"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-[#650000] flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#B8913A] flex-shrink-0" />
                       <span>{benefit}</span>
                     </div>
                   ))}
@@ -305,40 +303,40 @@ export default function GymSpaceShowcase({
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <button
                   type="button"
                   onClick={handleCtaPrimaryClick}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FAFA33] text-[#650000] border border-[#650000]/30 px-6 py-3 font-extrabold text-xs sm:text-sm shadow-xs hover:bg-[#650000] hover:text-[#FAFA33] transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#FAFA33] text-[#740202] border border-[#740202]/30 px-6 py-3 font-semibold italic text-xs sm:text-sm shadow-xs hover:bg-[#740202] hover:text-[#FAFA33] transition-all cursor-pointer"
                 >
-                  <Utensils className="w-4 h-4" />
+                  <Store className="w-4 h-4" />
                   <span>{activeCategory.primaryCta}</span>
                 </button>
-
 
                 <button
                   type="button"
                   onClick={handleCtaSecondaryClick}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#650000] text-[#FFFBCC] border border-[#650000] px-6 py-3 font-extrabold text-xs sm:text-sm shadow-xs hover:bg-[#650000] hover:text-[#FAFA33] transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#740202] text-[#FAFA33] border border-[#740202] px-6 py-3 font-semibold italic text-xs sm:text-sm shadow-xs hover:bg-[#500101] hover:text-[#FAFA33] transition-all cursor-pointer"
                 >
-                  <Store className="w-4 h-4 text-[#FAFA33]" />
+                  <Gift className="w-4 h-4 text-[#FAFA33]" />
                   <span>{activeCategory.secondaryCta}</span>
                 </button>
               </div>
 
             </div>
 
-            {/* Right Column: Featured Category Image */}
+            {/* Right Column: Featured Category Image from resources */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#650000]/20 bg-[#650000] shadow-[0_16px_40px_rgba(101,0,0,0.15)] aspect-4/5 w-full max-w-lg mx-auto group">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#740202]/20 bg-[#740202] shadow-[0_16px_40px_rgba(116,2,2,0.15)] aspect-[4/5] sm:aspect-[3/4] w-full max-w-lg mx-auto group">
                 <Image
                   key={activeCategory.id}
                   src={activeCategory.image}
                   alt={activeCategory.title}
                   fill
-                  priority
+                  loading="lazy"
+                  decoding="async"
                   sizes="(max-width: 1024px) 100vw, 45vw"
-                  className={`object-cover object-top transition-all duration-500 group-hover:scale-105 ${
+                  className={`object-cover object-center transition-all duration-500 group-hover:scale-105 ${
                     isAnimating ? "opacity-40 scale-102" : "opacity-100 scale-100"
                   }`}
                 />
@@ -347,8 +345,13 @@ export default function GymSpaceShowcase({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 
                 {/* Floating Category Label */}
-                <div className="absolute bottom-4 left-4 right-4 bg-[#650000] text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl border-2 border-[#FAFA33] shadow-xl flex items-center justify-between text-xs sm:text-sm lg:text-base font-bold tracking-wide z-10">
-                  <span className="whitespace-normal leading-tight">{activeCategory.title} Space</span>
+                <div className="absolute bottom-4 left-4 right-4 bg-[#740202] text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl border-2 border-[#FAFA33] shadow-xl flex items-center justify-between z-10">
+                  <span
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="whitespace-normal leading-tight text-base sm:text-lg font-semibold italic text-white"
+                  >
+                    {activeCategory.title} Space
+                  </span>
                   <ArrowRight className="w-5 h-5 text-[#FAFA33] flex-shrink-0 ml-2" />
                 </div>
               </div>
@@ -366,14 +369,17 @@ export default function GymSpaceShowcase({
                 key={idx}
                 className="flex items-center gap-3 p-3 rounded-2xl bg-[#FFFDF5] border border-[#F0E2E4] shadow-2xs"
               >
-                <div className="p-2 rounded-xl bg-[#FFFBCC] text-[#650000] flex-shrink-0">
+                <div className="p-2 rounded-xl bg-[#FFFBCC] text-[#740202] flex-shrink-0">
                   <IconComp className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-extrabold text-[#650000] leading-tight">
+                  <h4 className="text-xs font-extrabold text-[#740202] leading-tight">
                     {item.label}
                   </h4>
-                  <p className="text-[10px] text-[#5F5F5F] font-bold mt-0.5">
+                  <p
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-xs text-[#1F1F1F] font-medium mt-0.5 leading-snug"
+                  >
                     {item.desc}
                   </p>
                 </div>

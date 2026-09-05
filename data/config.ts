@@ -1,7 +1,8 @@
 export const SITE_CONFIG = {
   name: "Racks on Rent",
-  tagline: "SHARE SPACE. GROW TOGETHER.",
-  domain: "https://www.racksonrent.com",
+  tagline: "SUBLET SPACE. SHARE SUCCESS.",
+  footerTagline: "SHARE SPACE. GROW TOGETHER.",
+  domain: "https://giftshop.racksonrent.com",
   phone: "7995424477",
   phoneFormatted: "+91 7995424477",
   phoneDisplay: "7995424477",
@@ -16,13 +17,11 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Opportunities", href: "/#opportunities" },
-  { label: "How It Works", href: "/#how-it-works" },
-  { label: "Categories", href: "/categories" },
-  { label: "Why Choose Us", href: "/#why-choose-us" },
-  { label: "FAQs", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", href: "#hero" },
+  { label: "Opportunities", href: "#opportunities" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Categories", href: "#categories" },
+  { label: "Why Choose Us", href: "#why-choose-us" },
+  { label: "FAQs", href: "#faq" },
+  { label: "Contact", href: "#contact" },
 ];
-
-

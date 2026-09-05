@@ -18,34 +18,32 @@ export const PRICING_TIERS: PricingTier[] = [
     targetRole: "For Gift Shop Owners",
     priceDisplay: "Free",
     period: "Forever",
-    description: "List your unused gift shop shelves, counter space, or display corners and start earning extra monthly income.",
+    description: "List your unused shelves, counters, or display corners and start earning extra monthly income.",
     features: [
       "Zero listing & setup fees",
-      "Direct brand enquiry matching",
-      "Set your own space rent terms",
-      "Full approval over displayed products"
+      "Direct gift brand & creator matching",
+      "Set your own rental terms",
+      "Full approval over displayed gift products"
     ],
     ctaLabel: "List Your Gift Shop Space",
     roleType: "gym-owner",
     highlighted: true
   },
   {
-    id: "vendor-space-rental",
-    title: "Display Space Placement",
+    id: "gift-space-rental",
+    title: "Gift Space Placement",
     targetRole: "For Gift Brands & Entrepreneurs",
     priceDisplay: "Flexible Plans",
     period: "Daily, Weekly or Monthly",
-    description: "Display and sell your handmade gifts, stationery, or accessories inside top local gift shops.",
+    description: "Display and sell your handmade gifts, crafts, stationery, or decor inside active gift stores.",
     features: [
-      "Access high daily gift-shop customer footfall",
-      "Flexible space sizes & display formats",
+      "Access high daily gift shop footfall",
+      "Flexible shelf & counter display formats",
       "Direct contact with gift shop owners",
-      "No heavy standalone retail overhead"
+      "No heavy standalone store lease overhead"
     ],
     ctaLabel: "Find Gift Shop Space",
     roleType: "wellness",
     highlighted: false
   }
 ];
-
-
